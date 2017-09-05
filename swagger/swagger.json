@@ -1,0 +1,2256 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "title": "beego Test API",
+        "description": "beego has a very cool tools to autogenerate documents for your API",
+        "version": "1.0.0",
+        "termsOfService": "http://beego.me/",
+        "contact": {
+            "email": "astaxie@gmail.com"
+        },
+        "license": {
+            "name": "Apache 2.0",
+            "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+        }
+    },
+    "basePath": "/v1",
+    "paths": {
+        "/DMoudle_Z/": {
+            "get": {
+                "tags": [
+                    "DMoudle_Z"
+                ],
+                "description": "get DMoudleZ",
+                "operationId": "DMoudleZController.Get All",
+                "parameters": [
+                    {
+                        "in": "query",
+                        "name": "query",
+                        "description": "Filter. e.g. col1:v1,col2:v2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "fields",
+                        "description": "Fields returned. e.g. col1,col2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "sortby",
+                        "description": "Sorted-by fields. e.g. col1,col2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "order",
+                        "description": "Order corresponding to each sortby field, if single value, apply to all sortby fields. e.g. desc,asc ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "limit",
+                        "description": "Limit the size of result set. Must be an integer",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "offset",
+                        "description": "Start position of result set. Must be an integer",
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "schema": {
+                            "$ref": "#/definitions/models.DMoudleZ"
+                        }
+                    },
+                    "403": {}
+                }
+            },
+            "post": {
+                "tags": [
+                    "DMoudle_Z"
+                ],
+                "description": "create DMoudleZ",
+                "operationId": "DMoudleZController.Post",
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "body for DMoudleZ content",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.DMoudleZ"
+                        }
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "{int} models.DMoudleZ"
+                    },
+                    "403": {
+                        "description": "body is empty"
+                    }
+                }
+            }
+        },
+        "/DMoudle_Z/{id}": {
+            "get": {
+                "tags": [
+                    "DMoudle_Z"
+                ],
+                "description": "get DMoudleZ by id",
+                "operationId": "DMoudleZController.Get One",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The key for staticblock",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "schema": {
+                            "$ref": "#/definitions/models.DMoudleZ"
+                        }
+                    },
+                    "403": {
+                        "description": ":id is empty"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "DMoudle_Z"
+                ],
+                "description": "update the DMoudleZ",
+                "operationId": "DMoudleZController.Put",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The id you want to update",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "body for DMoudleZ content",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.DMoudleZ"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "schema": {
+                            "$ref": "#/definitions/models.DMoudleZ"
+                        }
+                    },
+                    "403": {
+                        "description": ":id is not int"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "DMoudle_Z"
+                ],
+                "description": "delete the DMoudleZ",
+                "operationId": "DMoudleZController.Delete",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The id you want to delete",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "{string} delete success!"
+                    },
+                    "403": {
+                        "description": "id is empty"
+                    }
+                }
+            }
+        },
+        "/DroneMsg_Z/": {
+            "get": {
+                "tags": [
+                    "DroneMsg_Z"
+                ],
+                "description": "get DroneMsgZ",
+                "operationId": "DroneMsgZController.Get All",
+                "parameters": [
+                    {
+                        "in": "query",
+                        "name": "query",
+                        "description": "Filter. e.g. col1:v1,col2:v2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "fields",
+                        "description": "Fields returned. e.g. col1,col2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "sortby",
+                        "description": "Sorted-by fields. e.g. col1,col2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "order",
+                        "description": "Order corresponding to each sortby field, if single value, apply to all sortby fields. e.g. desc,asc ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "limit",
+                        "description": "Limit the size of result set. Must be an integer",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "offset",
+                        "description": "Start position of result set. Must be an integer",
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "schema": {
+                            "$ref": "#/definitions/models.DroneMsgZ"
+                        }
+                    },
+                    "403": {}
+                }
+            },
+            "post": {
+                "tags": [
+                    "DroneMsg_Z"
+                ],
+                "description": "create DroneMsgZ",
+                "operationId": "DroneMsgZController.Post",
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "body for DroneMsgZ content",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.DroneMsgZ"
+                        }
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "{int} models.DroneMsgZ"
+                    },
+                    "403": {
+                        "description": "body is empty"
+                    }
+                }
+            }
+        },
+        "/DroneMsg_Z/{id}": {
+            "get": {
+                "tags": [
+                    "DroneMsg_Z"
+                ],
+                "description": "get DroneMsgZ by id",
+                "operationId": "DroneMsgZController.Get One",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The key for staticblock",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "schema": {
+                            "$ref": "#/definitions/models.DroneMsgZ"
+                        }
+                    },
+                    "403": {
+                        "description": ":id is empty"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "DroneMsg_Z"
+                ],
+                "description": "update the DroneMsgZ",
+                "operationId": "DroneMsgZController.Put",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The id you want to update",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "body for DroneMsgZ content",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.DroneMsgZ"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "schema": {
+                            "$ref": "#/definitions/models.DroneMsgZ"
+                        }
+                    },
+                    "403": {
+                        "description": ":id is not int"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "DroneMsg_Z"
+                ],
+                "description": "delete the DroneMsgZ",
+                "operationId": "DroneMsgZController.Delete",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The id you want to delete",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "{string} delete success!"
+                    },
+                    "403": {
+                        "description": "id is empty"
+                    }
+                }
+            }
+        },
+        "/Gas_Z/": {
+            "get": {
+                "tags": [
+                    "Gas_Z"
+                ],
+                "description": "get GasZ",
+                "operationId": "GasZController.Get All",
+                "parameters": [
+                    {
+                        "in": "query",
+                        "name": "query",
+                        "description": "Filter. e.g. col1:v1,col2:v2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "fields",
+                        "description": "Fields returned. e.g. col1,col2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "sortby",
+                        "description": "Sorted-by fields. e.g. col1,col2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "order",
+                        "description": "Order corresponding to each sortby field, if single value, apply to all sortby fields. e.g. desc,asc ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "limit",
+                        "description": "Limit the size of result set. Must be an integer",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "offset",
+                        "description": "Start position of result set. Must be an integer",
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "schema": {
+                            "$ref": "#/definitions/models.GasZ"
+                        }
+                    },
+                    "403": {}
+                }
+            },
+            "post": {
+                "tags": [
+                    "Gas_Z"
+                ],
+                "description": "create GasZ",
+                "operationId": "GasZController.Post",
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "body for GasZ content",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.GasZ"
+                        }
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "{int} models.GasZ"
+                    },
+                    "403": {
+                        "description": "body is empty"
+                    }
+                }
+            }
+        },
+        "/Gas_Z/{id}": {
+            "get": {
+                "tags": [
+                    "Gas_Z"
+                ],
+                "description": "get GasZ by id",
+                "operationId": "GasZController.Get One",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The key for staticblock",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "schema": {
+                            "$ref": "#/definitions/models.GasZ"
+                        }
+                    },
+                    "403": {
+                        "description": ":id is empty"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "Gas_Z"
+                ],
+                "description": "update the GasZ",
+                "operationId": "GasZController.Put",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The id you want to update",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "body for GasZ content",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.GasZ"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "schema": {
+                            "$ref": "#/definitions/models.GasZ"
+                        }
+                    },
+                    "403": {
+                        "description": ":id is not int"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "Gas_Z"
+                ],
+                "description": "delete the GasZ",
+                "operationId": "GasZController.Delete",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The id you want to delete",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "{string} delete success!"
+                    },
+                    "403": {
+                        "description": "id is empty"
+                    }
+                }
+            }
+        },
+        "/Gasres_Z/": {
+            "get": {
+                "tags": [
+                    "Gasres_Z"
+                ],
+                "description": "get GasresZ",
+                "operationId": "GasresZController.Get All",
+                "parameters": [
+                    {
+                        "in": "query",
+                        "name": "query",
+                        "description": "Filter. e.g. col1:v1,col2:v2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "fields",
+                        "description": "Fields returned. e.g. col1,col2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "sortby",
+                        "description": "Sorted-by fields. e.g. col1,col2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "order",
+                        "description": "Order corresponding to each sortby field, if single value, apply to all sortby fields. e.g. desc,asc ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "limit",
+                        "description": "Limit the size of result set. Must be an integer",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "offset",
+                        "description": "Start position of result set. Must be an integer",
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "schema": {
+                            "$ref": "#/definitions/models.GasresZ"
+                        }
+                    },
+                    "403": {}
+                }
+            },
+            "post": {
+                "tags": [
+                    "Gasres_Z"
+                ],
+                "description": "create GasresZ",
+                "operationId": "GasresZController.Post",
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "body for GasresZ content",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.GasresZ"
+                        }
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "{int} models.GasresZ"
+                    },
+                    "403": {
+                        "description": "body is empty"
+                    }
+                }
+            }
+        },
+        "/Gasres_Z/{id}": {
+            "get": {
+                "tags": [
+                    "Gasres_Z"
+                ],
+                "description": "get GasresZ by id",
+                "operationId": "GasresZController.Get One",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The key for staticblock",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "schema": {
+                            "$ref": "#/definitions/models.GasresZ"
+                        }
+                    },
+                    "403": {
+                        "description": ":id is empty"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "Gasres_Z"
+                ],
+                "description": "update the GasresZ",
+                "operationId": "GasresZController.Put",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The id you want to update",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "body for GasresZ content",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.GasresZ"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "schema": {
+                            "$ref": "#/definitions/models.GasresZ"
+                        }
+                    },
+                    "403": {
+                        "description": ":id is not int"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "Gasres_Z"
+                ],
+                "description": "delete the GasresZ",
+                "operationId": "GasresZController.Delete",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The id you want to delete",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "{string} delete success!"
+                    },
+                    "403": {
+                        "description": "id is empty"
+                    }
+                }
+            }
+        },
+        "/Group_Z/": {
+            "get": {
+                "tags": [
+                    "Group_Z"
+                ],
+                "description": "get GroupZ",
+                "operationId": "GroupZController.Get All",
+                "parameters": [
+                    {
+                        "in": "query",
+                        "name": "query",
+                        "description": "Filter. e.g. col1:v1,col2:v2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "fields",
+                        "description": "Fields returned. e.g. col1,col2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "sortby",
+                        "description": "Sorted-by fields. e.g. col1,col2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "order",
+                        "description": "Order corresponding to each sortby field, if single value, apply to all sortby fields. e.g. desc,asc ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "limit",
+                        "description": "Limit the size of result set. Must be an integer",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "offset",
+                        "description": "Start position of result set. Must be an integer",
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "schema": {
+                            "$ref": "#/definitions/models.GroupZ"
+                        }
+                    },
+                    "403": {}
+                }
+            },
+            "post": {
+                "tags": [
+                    "Group_Z"
+                ],
+                "description": "create GroupZ",
+                "operationId": "GroupZController.Post",
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "body for GroupZ content",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.GroupZ"
+                        }
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "{int} models.GroupZ"
+                    },
+                    "403": {
+                        "description": "body is empty"
+                    }
+                }
+            }
+        },
+        "/Group_Z/{id}": {
+            "get": {
+                "tags": [
+                    "Group_Z"
+                ],
+                "description": "get GroupZ by id",
+                "operationId": "GroupZController.Get One",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The key for staticblock",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "schema": {
+                            "$ref": "#/definitions/models.GroupZ"
+                        }
+                    },
+                    "403": {
+                        "description": ":id is empty"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "Group_Z"
+                ],
+                "description": "update the GroupZ",
+                "operationId": "GroupZController.Put",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The id you want to update",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "body for GroupZ content",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.GroupZ"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "schema": {
+                            "$ref": "#/definitions/models.GroupZ"
+                        }
+                    },
+                    "403": {
+                        "description": ":id is not int"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "Group_Z"
+                ],
+                "description": "delete the GroupZ",
+                "operationId": "GroupZController.Delete",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The id you want to delete",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "{string} delete success!"
+                    },
+                    "403": {
+                        "description": "id is empty"
+                    }
+                }
+            }
+        },
+        "/Level_Z/": {
+            "get": {
+                "tags": [
+                    "Level_Z"
+                ],
+                "description": "get LevelZ",
+                "operationId": "LevelZController.Get All",
+                "parameters": [
+                    {
+                        "in": "query",
+                        "name": "query",
+                        "description": "Filter. e.g. col1:v1,col2:v2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "fields",
+                        "description": "Fields returned. e.g. col1,col2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "sortby",
+                        "description": "Sorted-by fields. e.g. col1,col2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "order",
+                        "description": "Order corresponding to each sortby field, if single value, apply to all sortby fields. e.g. desc,asc ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "limit",
+                        "description": "Limit the size of result set. Must be an integer",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "offset",
+                        "description": "Start position of result set. Must be an integer",
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "schema": {
+                            "$ref": "#/definitions/models.LevelZ"
+                        }
+                    },
+                    "403": {}
+                }
+            },
+            "post": {
+                "tags": [
+                    "Level_Z"
+                ],
+                "description": "create LevelZ",
+                "operationId": "LevelZController.Post",
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "body for LevelZ content",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.LevelZ"
+                        }
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "{int} models.LevelZ"
+                    },
+                    "403": {
+                        "description": "body is empty"
+                    }
+                }
+            }
+        },
+        "/Level_Z/{id}": {
+            "get": {
+                "tags": [
+                    "Level_Z"
+                ],
+                "description": "get LevelZ by id",
+                "operationId": "LevelZController.Get One",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The key for staticblock",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "schema": {
+                            "$ref": "#/definitions/models.LevelZ"
+                        }
+                    },
+                    "403": {
+                        "description": ":id is empty"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "Level_Z"
+                ],
+                "description": "update the LevelZ",
+                "operationId": "LevelZController.Put",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The id you want to update",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "body for LevelZ content",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.LevelZ"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "schema": {
+                            "$ref": "#/definitions/models.LevelZ"
+                        }
+                    },
+                    "403": {
+                        "description": ":id is not int"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "Level_Z"
+                ],
+                "description": "delete the LevelZ",
+                "operationId": "LevelZController.Delete",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The id you want to delete",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "{string} delete success!"
+                    },
+                    "403": {
+                        "description": "id is empty"
+                    }
+                }
+            }
+        },
+        "/Log_Z/": {
+            "get": {
+                "tags": [
+                    "Log_Z"
+                ],
+                "description": "get LogZ",
+                "operationId": "LogZController.Get All",
+                "parameters": [
+                    {
+                        "in": "query",
+                        "name": "query",
+                        "description": "Filter. e.g. col1:v1,col2:v2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "fields",
+                        "description": "Fields returned. e.g. col1,col2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "sortby",
+                        "description": "Sorted-by fields. e.g. col1,col2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "order",
+                        "description": "Order corresponding to each sortby field, if single value, apply to all sortby fields. e.g. desc,asc ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "limit",
+                        "description": "Limit the size of result set. Must be an integer",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "offset",
+                        "description": "Start position of result set. Must be an integer",
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "schema": {
+                            "$ref": "#/definitions/models.LogZ"
+                        }
+                    },
+                    "403": {}
+                }
+            },
+            "post": {
+                "tags": [
+                    "Log_Z"
+                ],
+                "description": "create LogZ",
+                "operationId": "LogZController.Post",
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "body for LogZ content",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.LogZ"
+                        }
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "{int} models.LogZ"
+                    },
+                    "403": {
+                        "description": "body is empty"
+                    }
+                }
+            }
+        },
+        "/Log_Z/{id}": {
+            "get": {
+                "tags": [
+                    "Log_Z"
+                ],
+                "description": "get LogZ by id",
+                "operationId": "LogZController.Get One",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The key for staticblock",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "schema": {
+                            "$ref": "#/definitions/models.LogZ"
+                        }
+                    },
+                    "403": {
+                        "description": ":id is empty"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "Log_Z"
+                ],
+                "description": "update the LogZ",
+                "operationId": "LogZController.Put",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The id you want to update",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "body for LogZ content",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.LogZ"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "schema": {
+                            "$ref": "#/definitions/models.LogZ"
+                        }
+                    },
+                    "403": {
+                        "description": ":id is not int"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "Log_Z"
+                ],
+                "description": "delete the LogZ",
+                "operationId": "LogZController.Delete",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The id you want to delete",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "{string} delete success!"
+                    },
+                    "403": {
+                        "description": "id is empty"
+                    }
+                }
+            }
+        },
+        "/Moudle_Z/": {
+            "get": {
+                "tags": [
+                    "Moudle_Z"
+                ],
+                "description": "get MoudleZ",
+                "operationId": "MoudleZController.Get All",
+                "parameters": [
+                    {
+                        "in": "query",
+                        "name": "query",
+                        "description": "Filter. e.g. col1:v1,col2:v2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "fields",
+                        "description": "Fields returned. e.g. col1,col2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "sortby",
+                        "description": "Sorted-by fields. e.g. col1,col2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "order",
+                        "description": "Order corresponding to each sortby field, if single value, apply to all sortby fields. e.g. desc,asc ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "limit",
+                        "description": "Limit the size of result set. Must be an integer",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "offset",
+                        "description": "Start position of result set. Must be an integer",
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "schema": {
+                            "$ref": "#/definitions/models.MoudleZ"
+                        }
+                    },
+                    "403": {}
+                }
+            },
+            "post": {
+                "tags": [
+                    "Moudle_Z"
+                ],
+                "description": "create MoudleZ",
+                "operationId": "MoudleZController.Post",
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "body for MoudleZ content",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.MoudleZ"
+                        }
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "{int} models.MoudleZ"
+                    },
+                    "403": {
+                        "description": "body is empty"
+                    }
+                }
+            }
+        },
+        "/Moudle_Z/{id}": {
+            "get": {
+                "tags": [
+                    "Moudle_Z"
+                ],
+                "description": "get MoudleZ by id",
+                "operationId": "MoudleZController.Get One",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The key for staticblock",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "schema": {
+                            "$ref": "#/definitions/models.MoudleZ"
+                        }
+                    },
+                    "403": {
+                        "description": ":id is empty"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "Moudle_Z"
+                ],
+                "description": "update the MoudleZ",
+                "operationId": "MoudleZController.Put",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The id you want to update",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "body for MoudleZ content",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.MoudleZ"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "schema": {
+                            "$ref": "#/definitions/models.MoudleZ"
+                        }
+                    },
+                    "403": {
+                        "description": ":id is not int"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "Moudle_Z"
+                ],
+                "description": "delete the MoudleZ",
+                "operationId": "MoudleZController.Delete",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The id you want to delete",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "{string} delete success!"
+                    },
+                    "403": {
+                        "description": "id is empty"
+                    }
+                }
+            }
+        },
+        "/Trace_Z/": {
+            "get": {
+                "tags": [
+                    "Trace_Z"
+                ],
+                "description": "get TraceZ",
+                "operationId": "TraceZController.Get All",
+                "parameters": [
+                    {
+                        "in": "query",
+                        "name": "query",
+                        "description": "Filter. e.g. col1:v1,col2:v2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "fields",
+                        "description": "Fields returned. e.g. col1,col2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "sortby",
+                        "description": "Sorted-by fields. e.g. col1,col2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "order",
+                        "description": "Order corresponding to each sortby field, if single value, apply to all sortby fields. e.g. desc,asc ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "limit",
+                        "description": "Limit the size of result set. Must be an integer",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "offset",
+                        "description": "Start position of result set. Must be an integer",
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "schema": {
+                            "$ref": "#/definitions/models.TraceZ"
+                        }
+                    },
+                    "403": {}
+                }
+            },
+            "post": {
+                "tags": [
+                    "Trace_Z"
+                ],
+                "description": "create TraceZ",
+                "operationId": "TraceZController.Post",
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "body for TraceZ content",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.TraceZ"
+                        }
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "{int} models.TraceZ"
+                    },
+                    "403": {
+                        "description": "body is empty"
+                    }
+                }
+            }
+        },
+        "/Trace_Z/{id}": {
+            "get": {
+                "tags": [
+                    "Trace_Z"
+                ],
+                "description": "get TraceZ by id",
+                "operationId": "TraceZController.Get One",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The key for staticblock",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "schema": {
+                            "$ref": "#/definitions/models.TraceZ"
+                        }
+                    },
+                    "403": {
+                        "description": ":id is empty"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "Trace_Z"
+                ],
+                "description": "update the TraceZ",
+                "operationId": "TraceZController.Put",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The id you want to update",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "body for TraceZ content",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.TraceZ"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "schema": {
+                            "$ref": "#/definitions/models.TraceZ"
+                        }
+                    },
+                    "403": {
+                        "description": ":id is not int"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "Trace_Z"
+                ],
+                "description": "delete the TraceZ",
+                "operationId": "TraceZController.Delete",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The id you want to delete",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "{string} delete success!"
+                    },
+                    "403": {
+                        "description": "id is empty"
+                    }
+                }
+            }
+        },
+        "/User_Z/": {
+            "get": {
+                "tags": [
+                    "User_Z"
+                ],
+                "description": "get UserZ",
+                "operationId": "UserZController.Get All",
+                "parameters": [
+                    {
+                        "in": "query",
+                        "name": "query",
+                        "description": "Filter. e.g. col1:v1,col2:v2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "fields",
+                        "description": "Fields returned. e.g. col1,col2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "sortby",
+                        "description": "Sorted-by fields. e.g. col1,col2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "order",
+                        "description": "Order corresponding to each sortby field, if single value, apply to all sortby fields. e.g. desc,asc ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "limit",
+                        "description": "Limit the size of result set. Must be an integer",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "offset",
+                        "description": "Start position of result set. Must be an integer",
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "schema": {
+                            "$ref": "#/definitions/models.UserZ"
+                        }
+                    },
+                    "403": {}
+                }
+            },
+            "post": {
+                "tags": [
+                    "User_Z"
+                ],
+                "description": "create UserZ",
+                "operationId": "UserZController.Post",
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "body for UserZ content",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.UserZ"
+                        }
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "{int} models.UserZ"
+                    },
+                    "403": {
+                        "description": "body is empty"
+                    }
+                }
+            }
+        },
+        "/User_Z/{id}": {
+            "get": {
+                "tags": [
+                    "User_Z"
+                ],
+                "description": "get UserZ by id",
+                "operationId": "UserZController.Get One",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The key for staticblock",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "schema": {
+                            "$ref": "#/definitions/models.UserZ"
+                        }
+                    },
+                    "403": {
+                        "description": ":id is empty"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "User_Z"
+                ],
+                "description": "update the UserZ",
+                "operationId": "UserZController.Put",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The id you want to update",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "body for UserZ content",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.UserZ"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "schema": {
+                            "$ref": "#/definitions/models.UserZ"
+                        }
+                    },
+                    "403": {
+                        "description": ":id is not int"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "User_Z"
+                ],
+                "description": "delete the UserZ",
+                "operationId": "UserZController.Delete",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The id you want to delete",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "{string} delete success!"
+                    },
+                    "403": {
+                        "description": "id is empty"
+                    }
+                }
+            }
+        },
+        "/Video_Z/": {
+            "get": {
+                "tags": [
+                    "Video_Z"
+                ],
+                "description": "get VideoZ",
+                "operationId": "VideoZController.Get All",
+                "parameters": [
+                    {
+                        "in": "query",
+                        "name": "query",
+                        "description": "Filter. e.g. col1:v1,col2:v2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "fields",
+                        "description": "Fields returned. e.g. col1,col2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "sortby",
+                        "description": "Sorted-by fields. e.g. col1,col2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "order",
+                        "description": "Order corresponding to each sortby field, if single value, apply to all sortby fields. e.g. desc,asc ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "limit",
+                        "description": "Limit the size of result set. Must be an integer",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "offset",
+                        "description": "Start position of result set. Must be an integer",
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "schema": {
+                            "$ref": "#/definitions/models.VideoZ"
+                        }
+                    },
+                    "403": {}
+                }
+            },
+            "post": {
+                "tags": [
+                    "Video_Z"
+                ],
+                "description": "create VideoZ",
+                "operationId": "VideoZController.Post",
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "body for VideoZ content",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.VideoZ"
+                        }
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "{int} models.VideoZ"
+                    },
+                    "403": {
+                        "description": "body is empty"
+                    }
+                }
+            }
+        },
+        "/Video_Z/{id}": {
+            "get": {
+                "tags": [
+                    "Video_Z"
+                ],
+                "description": "get VideoZ by id",
+                "operationId": "VideoZController.Get One",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The key for staticblock",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "schema": {
+                            "$ref": "#/definitions/models.VideoZ"
+                        }
+                    },
+                    "403": {
+                        "description": ":id is empty"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "Video_Z"
+                ],
+                "description": "update the VideoZ",
+                "operationId": "VideoZController.Put",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The id you want to update",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "body for VideoZ content",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.VideoZ"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "schema": {
+                            "$ref": "#/definitions/models.VideoZ"
+                        }
+                    },
+                    "403": {
+                        "description": ":id is not int"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "Video_Z"
+                ],
+                "description": "delete the VideoZ",
+                "operationId": "VideoZController.Delete",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The id you want to delete",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "{string} delete success!"
+                    },
+                    "403": {
+                        "description": "id is empty"
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "models.DMoudleZ": {
+            "title": "DMoudleZ",
+            "type": "object",
+            "properties": {
+                "DMoudleAddress": {
+                    "type": "string"
+                },
+                "DMoudleDate": {
+                    "type": "string",
+                    "format": "string"
+                },
+                "DMoudleDateTime": {
+                    "type": "string",
+                    "format": "string"
+                },
+                "DMoudleName": {
+                    "type": "string"
+                },
+                "DroneID": {
+                    "type": "string"
+                },
+                "Id": {
+                    "type": "integer",
+                    "format": "int64"
+                }
+            }
+        },
+        "models.DroneMsgZ": {
+            "title": "DroneMsgZ",
+            "type": "object",
+            "properties": {
+                "DroneAlt": {
+                    "type": "number",
+                    "format": "float"
+                },
+                "DroneBool": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "DroneDate": {
+                    "type": "string",
+                    "format": "string"
+                },
+                "DroneDateTime": {
+                    "type": "string",
+                    "format": "string"
+                },
+                "DroneID": {
+                    "type": "string"
+                },
+                "DronePitch": {
+                    "type": "number",
+                    "format": "float"
+                },
+                "DroneSpeed": {
+                    "type": "number",
+                    "format": "float"
+                },
+                "DroneYaw": {
+                    "type": "number",
+                    "format": "float"
+                },
+                "Id": {
+                    "type": "integer",
+                    "format": "int64"
+                }
+            }
+        },
+        "models.GasZ": {
+            "title": "GasZ",
+            "type": "object",
+            "properties": {
+                "DroneID": {
+                    "type": "string"
+                },
+                "GasBool": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "GasDate": {
+                    "type": "string",
+                    "format": "string"
+                },
+                "GasDateTime": {
+                    "type": "string",
+                    "format": "string"
+                },
+                "GasName": {
+                    "type": "string"
+                },
+                "GasNumber": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "Id": {
+                    "type": "integer",
+                    "format": "int64"
+                }
+            }
+        },
+        "models.GasresZ": {
+            "title": "GasresZ",
+            "type": "object",
+            "properties": {
+                "GasResDate": {
+                    "type": "string",
+                    "format": "string"
+                },
+                "GasResDateTime": {
+                    "type": "string",
+                    "format": "string"
+                },
+                "GasResName": {
+                    "type": "string"
+                },
+                "GasResNumber": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "Id": {
+                    "type": "integer",
+                    "format": "int64"
+                }
+            }
+        },
+        "models.GroupZ": {
+            "title": "GroupZ",
+            "type": "object",
+            "properties": {
+                "DroneID": {
+                    "type": "string"
+                },
+                "GroupDate": {
+                    "type": "string",
+                    "format": "string"
+                },
+                "GroupNewName": {
+                    "type": "string"
+                },
+                "GroupOldName": {
+                    "type": "string"
+                },
+                "GroupUpdateTime": {
+                    "type": "string",
+                    "format": "string"
+                },
+                "Id": {
+                    "type": "integer",
+                    "format": "int64"
+                }
+            }
+        },
+        "models.LevelZ": {
+            "title": "LevelZ",
+            "type": "object",
+            "properties": {
+                "Id": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "LevelDate": {
+                    "type": "string",
+                    "format": "string"
+                },
+                "LevelDateTime": {
+                    "type": "string",
+                    "format": "string"
+                },
+                "LevelName": {
+                    "type": "string"
+                },
+                "LevelNumber": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "LevelUpNumber": {
+                    "type": "integer",
+                    "format": "int64"
+                }
+            }
+        },
+        "models.LogZ": {
+            "title": "LogZ",
+            "type": "object",
+            "properties": {
+                "Id": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "LogAddress": {
+                    "type": "string"
+                },
+                "LogDate": {
+                    "type": "string",
+                    "format": "string"
+                },
+                "LogDateTime": {
+                    "type": "string",
+                    "format": "string"
+                },
+                "LogName": {
+                    "type": "string"
+                },
+                "UserOrDrone": {
+                    "type": "integer",
+                    "format": "int64"
+                }
+            }
+        },
+        "models.MoudleZ": {
+            "title": "MoudleZ",
+            "type": "object",
+            "properties": {
+                "DroneID": {
+                    "type": "string"
+                },
+                "Id": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "ModuleName": {
+                    "type": "string"
+                },
+                "MoudleBool": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "MoudleDate": {
+                    "type": "string",
+                    "format": "string"
+                },
+                "MoudleDateTime": {
+                    "type": "string",
+                    "format": "string"
+                }
+            }
+        },
+        "models.TraceZ": {
+            "title": "TraceZ",
+            "type": "object",
+            "properties": {
+                "DMoudleId": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "DroneID": {
+                    "type": "string"
+                },
+                "Id": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "Lat": {
+                    "type": "number",
+                    "format": "float"
+                },
+                "Lng": {
+                    "type": "number",
+                    "format": "float"
+                },
+                "TraceDate": {
+                    "type": "string",
+                    "format": "string"
+                },
+                "TraceDateTime": {
+                    "type": "string",
+                    "format": "string"
+                },
+                "WayBool": {
+                    "type": "integer",
+                    "format": "int64"
+                }
+            }
+        },
+        "models.UserZ": {
+            "title": "UserZ",
+            "type": "object",
+            "properties": {
+                "Id": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "LoginTime": {
+                    "type": "string",
+                    "format": "string"
+                },
+                "UserAdminBool": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "UserData": {
+                    "type": "string",
+                    "format": "string"
+                },
+                "UserName": {
+                    "type": "string"
+                },
+                "UserPwd": {
+                    "type": "string"
+                }
+            }
+        },
+        "models.VideoZ": {
+            "title": "VideoZ",
+            "type": "object",
+            "properties": {
+                "DroneID": {
+                    "type": "string"
+                },
+                "Id": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "VideoAndBool": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "VideoDate": {
+                    "type": "string",
+                    "format": "string"
+                },
+                "VideoRtmpAddress": {
+                    "type": "string"
+                },
+                "VideoRtmpDateTime": {
+                    "type": "string",
+                    "format": "string"
+                },
+                "VideoStoreAddress": {
+                    "type": "string"
+                },
+                "VideoStoreBool": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "VideoStoreTime": {
+                    "type": "string",
+                    "format": "string"
+                }
+            }
+        }
+    },
+    "tags": [
+        {
+            "name": "DMoudle_Z",
+            "description": "DMoudleZController operations for DMoudleZ\n"
+        },
+        {
+            "name": "DroneMsg_Z",
+            "description": "DroneMsgZController operations for DroneMsgZ\n"
+        },
+        {
+            "name": "Gas_Z",
+            "description": "GasZController operations for GasZ\n"
+        },
+        {
+            "name": "Gasres_Z",
+            "description": "GasresZController operations for GasresZ\n"
+        },
+        {
+            "name": "Group_Z",
+            "description": "GroupZController operations for GroupZ\n"
+        },
+        {
+            "name": "Level_Z",
+            "description": "LevelZController operations for LevelZ\n"
+        },
+        {
+            "name": "Log_Z",
+            "description": "LogZController operations for LogZ\n"
+        },
+        {
+            "name": "Moudle_Z",
+            "description": "MoudleZController operations for MoudleZ\n"
+        },
+        {
+            "name": "Trace_Z",
+            "description": "TraceZController operations for TraceZ\n"
+        },
+        {
+            "name": "User_Z",
+            "description": "UserZController operations for UserZ\n"
+        },
+        {
+            "name": "Video_Z",
+            "description": "VideoZController operations for VideoZ\n"
+        }
+    ]
+}
