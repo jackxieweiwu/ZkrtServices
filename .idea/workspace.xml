@@ -1,7 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="945d673d-3b05-46b0-b1c0-46ab938466b0" name="Default" comment="" />
+    <list default="true" id="945d673d-3b05-46b0-b1c0-46ab938466b0" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Dump20170905-2/ZKRT_DATABSE_DMoudle_Z.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Dump20170905-2/ZKRT_DATABSE_DroneMsg_Z.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Dump20170905-2/ZKRT_DATABSE_Gas_Z.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Dump20170905-2/ZKRT_DATABSE_Gasres_Z.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Dump20170905-2/ZKRT_DATABSE_Group_Z.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Dump20170905-2/ZKRT_DATABSE_Level_Z.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Dump20170905-2/ZKRT_DATABSE_Log_Z.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Dump20170905-2/ZKRT_DATABSE_Moudle_Z.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Dump20170905-2/ZKRT_DATABSE_Trace_Z.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Dump20170905-2/ZKRT_DATABSE_User_Z.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Dump20170905-2/ZKRT_DATABSE_Video_Z.sql" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -38,12 +50,48 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="User_Z.go" pinned="false" current-in-tab="true">
+      <file leaf-file-name="User_Z.go" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/controllers/User_Z.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="301">
-              <caret line="83" column="5" lean-forward="true" selection-start-line="83" selection-start-column="5" selection-end-line="83" selection-end-column="5" />
+            <state relative-caret-position="283">
+              <caret line="82" column="26" lean-forward="false" selection-start-line="82" selection-start-column="26" selection-end-line="82" selection-end-column="26" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ZKRT_DATABSE_Gas_Z.sql" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Dump20170905-2/ZKRT_DATABSE_Gas_Z.sql">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="342">
+              <caret line="19" column="2" lean-forward="true" selection-start-line="19" selection-start-column="2" selection-end-line="19" selection-end-column="2" />
+              <folding>
+                <marker date="1504622127000" expanded="true" signature="205:269" ph="/*!40101 SET... " />
+                <marker date="1504622127000" expanded="true" signature="271:337" ph="/*!40101 SET... " />
+                <marker date="1504622127000" expanded="true" signature="339:403" ph="/*!40101 SET... " />
+                <marker date="1504622127000" expanded="true" signature="405:431" ph="/*!40101 SET... " />
+                <marker date="1504622127000" expanded="true" signature="433:475" ph="/*!40103 SET... " />
+                <marker date="1504622127000" expanded="true" signature="477:511" ph="/*!40103 SET... " />
+                <marker date="1504622127000" expanded="true" signature="513:580" ph="/*!40014 SET... " />
+                <marker date="1504622127000" expanded="true" signature="582:664" ph="/*!40014 SET... " />
+                <marker date="1504622127000" expanded="true" signature="666:740" ph="/*!40101 SET... " />
+                <marker date="1504622127000" expanded="true" signature="742:797" ph="/*!40111 SET... " />
+                <marker date="1504622127000" expanded="true" signature="844:872" ph="DROP TABLE I... " />
+                <marker date="1504622127000" expanded="true" signature="874:935" ph="/*!40101 SET... " />
+                <marker date="1504622127000" expanded="true" signature="937:980" ph="/*!40101 SET... " />
+                <marker date="1504622127000" expanded="true" signature="982:1386" ph="CREATE TABLE... Gas_Z" />
+                <marker date="1504622127000" expanded="true" signature="1388:1443" ph="/*!40101 SET... " />
+                <marker date="1504622127000" expanded="true" signature="1514:1558" ph="/*!40000 ALT... " />
+                <marker date="1504622127000" expanded="true" signature="1560:1603" ph="/*!40000 ALT... " />
+                <marker date="1504622127000" expanded="true" signature="1620:1660" ph="/*!40103 SET... " />
+                <marker date="1504622127000" expanded="true" signature="1663:1701" ph="/*!40101 SET... " />
+                <marker date="1504622127000" expanded="true" signature="1703:1761" ph="/*!40014 SET... " />
+                <marker date="1504622127000" expanded="true" signature="1763:1811" ph="/*!40014 SET... " />
+                <marker date="1504622127000" expanded="true" signature="1813:1875" ph="/*!40101 SET... " />
+                <marker date="1504622127000" expanded="true" signature="1877:1941" ph="/*!40101 SET... " />
+                <marker date="1504622127000" expanded="true" signature="1943:2005" ph="/*!40101 SET... " />
+                <marker date="1504622127000" expanded="true" signature="2007:2047" ph="/*!40111 SET... " />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -66,8 +114,8 @@
       <find>AddUserZ</find>
       <find>GetUserZById</find>
       <find>GetOne</find>
-      <find>Cond</find>
       <find>Include</find>
+      <find>Cond</find>
     </findStrings>
   </component>
   <component name="GOROOT" path="/usr/local/go" />
@@ -129,26 +177,6 @@
               <item name="ZkrtServices" type="b2602c69:ProjectViewProjectNode" />
               <item name="ZkrtServices" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="ZkrtServices" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ZkrtServices" type="462c0819:PsiDirectoryNode" />
-              <item name="conf" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ZkrtServices" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ZkrtServices" type="462c0819:PsiDirectoryNode" />
-              <item name="controllers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ZkrtServices" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ZkrtServices" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ZkrtServices" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ZkrtServices" type="462c0819:PsiDirectoryNode" />
-              <item name="routers" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -164,6 +192,11 @@
     <property name="configurable.Project.GOPATH.is.expanded" value="true" />
     <property name="configurable.Module.GOPATH.is.expanded" value="false" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -193,16 +226,15 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="697" y="149" width="1857" height="1092" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32944915" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32979852" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32979852" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JSON Viewer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32944915" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2520684" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2520684" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="JSON Utils" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32984003" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -235,14 +267,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/controllers/DMoudle_Z.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="18" column="39" lean-forward="false" selection-start-line="18" selection-start-column="29" selection-end-line="18" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/models/Level_Z.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
@@ -641,9 +665,43 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/controllers/User_Z.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="301">
-          <caret line="83" column="5" lean-forward="true" selection-start-line="83" selection-start-column="5" selection-end-line="83" selection-end-column="5" />
+        <state relative-caret-position="283">
+          <caret line="82" column="26" lean-forward="false" selection-start-line="82" selection-start-column="26" selection-end-line="82" selection-end-column="26" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dump20170905-2/ZKRT_DATABSE_Gas_Z.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="19" column="2" lean-forward="true" selection-start-line="19" selection-start-column="2" selection-end-line="19" selection-end-column="2" />
+          <folding>
+            <marker date="1504622127000" expanded="true" signature="205:269" ph="/*!40101 SET... " />
+            <marker date="1504622127000" expanded="true" signature="271:337" ph="/*!40101 SET... " />
+            <marker date="1504622127000" expanded="true" signature="339:403" ph="/*!40101 SET... " />
+            <marker date="1504622127000" expanded="true" signature="405:431" ph="/*!40101 SET... " />
+            <marker date="1504622127000" expanded="true" signature="433:475" ph="/*!40103 SET... " />
+            <marker date="1504622127000" expanded="true" signature="477:511" ph="/*!40103 SET... " />
+            <marker date="1504622127000" expanded="true" signature="513:580" ph="/*!40014 SET... " />
+            <marker date="1504622127000" expanded="true" signature="582:664" ph="/*!40014 SET... " />
+            <marker date="1504622127000" expanded="true" signature="666:740" ph="/*!40101 SET... " />
+            <marker date="1504622127000" expanded="true" signature="742:797" ph="/*!40111 SET... " />
+            <marker date="1504622127000" expanded="true" signature="844:872" ph="DROP TABLE I... " />
+            <marker date="1504622127000" expanded="true" signature="874:935" ph="/*!40101 SET... " />
+            <marker date="1504622127000" expanded="true" signature="937:980" ph="/*!40101 SET... " />
+            <marker date="1504622127000" expanded="true" signature="982:1386" ph="CREATE TABLE... Gas_Z" />
+            <marker date="1504622127000" expanded="true" signature="1388:1443" ph="/*!40101 SET... " />
+            <marker date="1504622127000" expanded="true" signature="1514:1558" ph="/*!40000 ALT... " />
+            <marker date="1504622127000" expanded="true" signature="1560:1603" ph="/*!40000 ALT... " />
+            <marker date="1504622127000" expanded="true" signature="1620:1660" ph="/*!40103 SET... " />
+            <marker date="1504622127000" expanded="true" signature="1663:1701" ph="/*!40101 SET... " />
+            <marker date="1504622127000" expanded="true" signature="1703:1761" ph="/*!40014 SET... " />
+            <marker date="1504622127000" expanded="true" signature="1763:1811" ph="/*!40014 SET... " />
+            <marker date="1504622127000" expanded="true" signature="1813:1875" ph="/*!40101 SET... " />
+            <marker date="1504622127000" expanded="true" signature="1877:1941" ph="/*!40101 SET... " />
+            <marker date="1504622127000" expanded="true" signature="1943:2005" ph="/*!40101 SET... " />
+            <marker date="1504622127000" expanded="true" signature="2007:2047" ph="/*!40111 SET... " />
+          </folding>
         </state>
       </provider>
     </entry>
