@@ -8,6 +8,7 @@ import (
 	"time"
 
 	"github.com/astaxie/beego/orm"
+	"strconv"
 )
 
 type UserZ struct {
@@ -29,28 +30,45 @@ func init() {
 
 // AddUserZ insert a new UserZ into database and returns
 // last inserted Id on success.
-func AddUserZ(m *UserZ) (id int64, err error) {
+func AddUserZ(user *UserZ) (id int64 , err error) {
 	o := orm.NewOrm()
-	id, err = o.Insert(m)
+	id, err = o.Insert(user)
+	return
+}
+
+// update :where userName  update UserAdminBool
+func UpdateAdminBool(userName string,userNum string) (id int64, err error)  {
+	o := orm.NewOrm()
+	num, _ := strconv.Atoi(userNum)
+	id, err = o.QueryTable(new(UserZ)).Filter("UserName", userName).Update(orm.Params{
+		"UserAdminBool": num,
+	})
 	return
 }
 
 // GetUserZById retrieves UserZ by Id. Returns error if
 // Id doesn't exist
-func GetUserZById(id int) (v *UserZ, err error) {
+func GetUserZById(username string) (v UserZ, err error) {
 	o := orm.NewOrm()
-	v = &UserZ{Id: id}
+	var user UserZ
+	err = o.QueryTable(new(UserZ)).Filter("UserName", username).One(&user)
+	if err == nil {
+		return user, nil
+	}
+	return user,err
+
+	/*v = &UserZ{UserName: username}
 	if err = o.Read(v); err == nil {
 		return v, nil
 	}
-	return nil, err
+	return nil, err*/
 }
 
 //Sign in
-func SetUserZSign(userName string,userPwd string) (v *UserZ, err error)  {
+func SetUserZSign(name string,pwd string) (v *UserZ, err error)  {
 	o := orm.NewOrm()
-	v = &UserZ{UserName:userName,UserPwd:userPwd}
-	if err = o.Read(v); err == nil{
+	v = &UserZ{UserName: name,UserPwd:pwd}
+	if err = o.Read(v,"UserName","UserPwd"); err == nil {
 		return v, nil
 	}
 	return nil, err
@@ -79,7 +97,7 @@ func GetAllUserZ(query map[string]string, fields []string, sortby []string, orde
 			// 1) for each sort field, there is an associated order
 			for i, v := range sortby {
 				orderby := ""
-				if order[i] == "desc" {
+				if order[i] == "desc" {/* `orm:"column(Uid);auto"`*/
 					orderby = "-" + v
 				} else if order[i] == "asc" {
 					orderby = v
@@ -151,15 +169,8 @@ func UpdateUserZById(m *UserZ) (err error) {
 
 // DeleteUserZ deletes UserZ by Id and returns error if
 // the record to be deleted doesn't exist
-func DeleteUserZ(id int) (err error) {
+func DeleteUserZ(userName string) (num int64,err error) {
 	o := orm.NewOrm()
-	v := UserZ{Id: id}
-	// ascertain id exists in the database
-	if err = o.Read(&v); err == nil {
-		var num int64
-		if num, err = o.Delete(&UserZ{Id: id}); err == nil {
-			fmt.Println("Number of records deleted in database:", num)
-		}
-	}
+	num ,err = o.QueryTable(new(UserZ)).Filter("UserName", userName).Delete()
 	return
 }

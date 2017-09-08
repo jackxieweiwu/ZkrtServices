@@ -1,6 +1,8 @@
+CREATE DATABASE  IF NOT EXISTS `ZKRT_DATABASE` /*!40100 DEFAULT CHARACTER SET latin1 */;
+USE `ZKRT_DATABASE`;
 -- MySQL dump 10.13  Distrib 5.7.19, for Linux (x86_64)
 --
--- Host: localhost    Database: ZKRT_DATABSE
+-- Host: localhost    Database: ZKRT_DATABASE
 -- ------------------------------------------------------
 -- Server version	5.7.19-0ubuntu0.17.04.1
 
@@ -16,31 +18,32 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `Log_Z`
+-- Table structure for table `Moudle_Z`
 --
 
-DROP TABLE IF EXISTS `Log_Z`;
+DROP TABLE IF EXISTS `Moudle_Z`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `Log_Z` (
-  `LogId` int(11) NOT NULL AUTO_INCREMENT,
-  `UserOrDrone` int(11) NOT NULL,
-  `LogName` varchar(100) NOT NULL,
-  `LogAddress` varchar(225) DEFAULT NULL,
-  `LogDateTime` datetime NOT NULL,
-  `LogDate` date NOT NULL,
-  PRIMARY KEY (`LogId`),
-  UNIQUE KEY `LogId_UNIQUE` (`LogId`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+CREATE TABLE `Moudle_Z` (
+  `MoudleID` int(11) NOT NULL AUTO_INCREMENT,
+  `DroneID` varchar(100) NOT NULL,
+  `ModuleName` varchar(225) NOT NULL,
+  `MoudleBool` int(11) NOT NULL,
+  `MoudleDateTime` datetime NOT NULL,
+  `MoudleDate` date NOT NULL,
+  PRIMARY KEY (`MoudleID`),
+  UNIQUE KEY `MoudleID_UNIQUE` (`MoudleID`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `Log_Z`
+-- Dumping data for table `Moudle_Z`
 --
 
-LOCK TABLES `Log_Z` WRITE;
-/*!40000 ALTER TABLE `Log_Z` DISABLE KEYS */;
-/*!40000 ALTER TABLE `Log_Z` ENABLE KEYS */;
+LOCK TABLES `Moudle_Z` WRITE;
+/*!40000 ALTER TABLE `Moudle_Z` DISABLE KEYS */;
+INSERT INTO `Moudle_Z` VALUES (1,'1113','投放模块',1,'2017-09-08 06:38:17','2017-09-08');
+/*!40000 ALTER TABLE `Moudle_Z` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -52,4 +55,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-09-05 22:35:27
+-- Dump completed on 2017-09-08 23:03:40

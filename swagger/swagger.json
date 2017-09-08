@@ -237,26 +237,236 @@
                     "403": {}
                 }
             },
+            "put": {
+                "tags": [
+                    "DroneMsg_Z"
+                ],
+                "description": "get DroneMsgZ",
+                "operationId": "DroneMsgZController.Get All",
+                "parameters": [
+                    {
+                        "in": "query",
+                        "name": "query",
+                        "description": "Filter. e.g. col1:v1,col2:v2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "fields",
+                        "description": "Fields returned. e.g. col1,col2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "sortby",
+                        "description": "Sorted-by fields. e.g. col1,col2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "order",
+                        "description": "Order corresponding to each sortby field, if single value, apply to all sortby fields. e.g. desc,asc ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "limit",
+                        "description": "Limit the size of result set. Must be an integer",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "offset",
+                        "description": "Start position of result set. Must be an integer",
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "schema": {
+                            "$ref": "#/definitions/models.DroneMsgZ"
+                        }
+                    },
+                    "403": {}
+                }
+            },
+            "post": {
+                "tags": [
+                    "DroneMsg_Z"
+                ],
+                "description": "get DroneMsgZ",
+                "operationId": "DroneMsgZController.Get All",
+                "parameters": [
+                    {
+                        "in": "query",
+                        "name": "query",
+                        "description": "Filter. e.g. col1:v1,col2:v2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "fields",
+                        "description": "Fields returned. e.g. col1,col2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "sortby",
+                        "description": "Sorted-by fields. e.g. col1,col2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "order",
+                        "description": "Order corresponding to each sortby field, if single value, apply to all sortby fields. e.g. desc,asc ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "limit",
+                        "description": "Limit the size of result set. Must be an integer",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "offset",
+                        "description": "Start position of result set. Must be an integer",
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "schema": {
+                            "$ref": "#/definitions/models.DroneMsgZ"
+                        }
+                    },
+                    "403": {}
+                }
+            }
+        },
+        "/DroneMsg_Z/AddDrone/{dronemsg}": {
+            "get": {
+                "tags": [
+                    "DroneMsg_Z"
+                ],
+                "description": "create DroneMsgZ",
+                "operationId": "DroneMsgZController.AddDroneMessage",
+                "parameters": [
+                    {
+                        "in": "query",
+                        "name": "DroneId",
+                        "description": "drone id",
+                        "schema": {
+                            "$ref": "#/definitions/.strinng"
+                        }
+                    },
+                    {
+                        "in": "query",
+                        "name": "DroneAlt",
+                        "description": "drone alt",
+                        "schema": {
+                            "$ref": "#/definitions/.float"
+                        }
+                    },
+                    {
+                        "in": "query",
+                        "name": "DroneYaw",
+                        "description": "drone yaw",
+                        "schema": {
+                            "$ref": "#/definitions/.float"
+                        }
+                    },
+                    {
+                        "in": "query",
+                        "name": "DronePitch",
+                        "description": "drone pitch",
+                        "schema": {
+                            "$ref": "#/definitions/.float"
+                        }
+                    },
+                    {
+                        "in": "query",
+                        "name": "DroneSpeed",
+                        "description": "drone speed",
+                        "schema": {
+                            "$ref": "#/definitions/.float"
+                        }
+                    },
+                    {
+                        "in": "query",
+                        "name": "DroneBool",
+                        "description": "drone bool",
+                        "type": "integer",
+                        "format": "int64"
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "{int} models.DroneMsgZ.id"
+                    },
+                    "403": {
+                        "description": "body is empty"
+                    }
+                }
+            },
             "post": {
                 "tags": [
                     "DroneMsg_Z"
                 ],
                 "description": "create DroneMsgZ",
-                "operationId": "DroneMsgZController.Post",
+                "operationId": "DroneMsgZController.AddDroneMessage",
                 "parameters": [
                     {
-                        "in": "body",
-                        "name": "body",
-                        "description": "body for DroneMsgZ content",
-                        "required": true,
+                        "in": "query",
+                        "name": "DroneId",
+                        "description": "drone id",
                         "schema": {
-                            "$ref": "#/definitions/models.DroneMsgZ"
+                            "$ref": "#/definitions/.strinng"
                         }
+                    },
+                    {
+                        "in": "query",
+                        "name": "DroneAlt",
+                        "description": "drone alt",
+                        "schema": {
+                            "$ref": "#/definitions/.float"
+                        }
+                    },
+                    {
+                        "in": "query",
+                        "name": "DroneYaw",
+                        "description": "drone yaw",
+                        "schema": {
+                            "$ref": "#/definitions/.float"
+                        }
+                    },
+                    {
+                        "in": "query",
+                        "name": "DronePitch",
+                        "description": "drone pitch",
+                        "schema": {
+                            "$ref": "#/definitions/.float"
+                        }
+                    },
+                    {
+                        "in": "query",
+                        "name": "DroneSpeed",
+                        "description": "drone speed",
+                        "schema": {
+                            "$ref": "#/definitions/.float"
+                        }
+                    },
+                    {
+                        "in": "query",
+                        "name": "DroneBool",
+                        "description": "drone bool",
+                        "type": "integer",
+                        "format": "int64"
                     }
                 ],
                 "responses": {
                     "201": {
-                        "description": "{int} models.DroneMsgZ"
+                        "description": "{int} models.DroneMsgZ.id"
                     },
                     "403": {
                         "description": "body is empty"
@@ -913,12 +1123,67 @@
                 "tags": [
                     "Level_Z"
                 ],
-                "description": "create LevelZ",
-                "operationId": "LevelZController.Post",
+                "description": "get LevelZ",
+                "operationId": "LevelZController.Get All",
                 "parameters": [
                     {
-                        "in": "body",
-                        "name": "body",
+                        "in": "query",
+                        "name": "query",
+                        "description": "Filter. e.g. col1:v1,col2:v2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "fields",
+                        "description": "Fields returned. e.g. col1,col2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "sortby",
+                        "description": "Sorted-by fields. e.g. col1,col2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "order",
+                        "description": "Order corresponding to each sortby field, if single value, apply to all sortby fields. e.g. desc,asc ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "limit",
+                        "description": "Limit the size of result set. Must be an integer",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "offset",
+                        "description": "Start position of result set. Must be an integer",
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "schema": {
+                            "$ref": "#/definitions/models.LevelZ"
+                        }
+                    },
+                    "403": {}
+                }
+            }
+        },
+        "/Level_Z/AddLevel/{levelName}": {
+            "get": {
+                "tags": [
+                    "Level_Z"
+                ],
+                "description": "create LevelZ",
+                "operationId": "LevelZController.AddLevelOne",
+                "parameters": [
+                    {
+                        "in": "string",
+                        "name": "levelName",
                         "description": "body for LevelZ content",
                         "required": true,
                         "schema": {
@@ -932,6 +1197,86 @@
                     },
                     "403": {
                         "description": "body is empty"
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "Level_Z"
+                ],
+                "description": "create LevelZ",
+                "operationId": "LevelZController.AddLevelOne",
+                "parameters": [
+                    {
+                        "in": "string",
+                        "name": "levelName",
+                        "description": "body for LevelZ content",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.LevelZ"
+                        }
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "{int} models.LevelZ"
+                    },
+                    "403": {
+                        "description": "body is empty"
+                    }
+                }
+            }
+        },
+        "/Level_Z/UpdateLevel/{levelUpdateName}": {
+            "get": {
+                "tags": [
+                    "Level_Z"
+                ],
+                "description": "update the LevelZ",
+                "operationId": "LevelZController.UpdateLevel",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "levelUpdateName",
+                        "description": "The id you want to update",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "schema": {
+                            "$ref": "#/definitions/models.LevelZ"
+                        }
+                    },
+                    "403": {
+                        "description": ":id is not int"
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "Level_Z"
+                ],
+                "description": "update the LevelZ",
+                "operationId": "LevelZController.UpdateLevel",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "levelUpdateName",
+                        "description": "The id you want to update",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "schema": {
+                            "$ref": "#/definitions/models.LevelZ"
+                        }
+                    },
+                    "403": {
+                        "description": ":id is not int"
                     }
                 }
             }
@@ -963,28 +1308,19 @@
                     }
                 }
             },
-            "put": {
+            "post": {
                 "tags": [
                     "Level_Z"
                 ],
-                "description": "update the LevelZ",
-                "operationId": "LevelZController.Put",
+                "description": "get LevelZ by id",
+                "operationId": "LevelZController.Get One",
                 "parameters": [
                     {
                         "in": "path",
                         "name": "id",
-                        "description": "The id you want to update",
+                        "description": "The key for staticblock",
                         "required": true,
                         "type": "string"
-                    },
-                    {
-                        "in": "body",
-                        "name": "body",
-                        "description": "body for LevelZ content",
-                        "required": true,
-                        "schema": {
-                            "$ref": "#/definitions/models.LevelZ"
-                        }
                     }
                 ],
                 "responses": {
@@ -994,7 +1330,7 @@
                         }
                     },
                     "403": {
-                        "description": ":id is not int"
+                        "description": ":id is empty"
                     }
                 }
             },
@@ -1580,6 +1916,86 @@
                     },
                     "403": {}
                 }
+            }
+        },
+        "/User_Z/AddUser/{userNamePwd}": {
+            "get": {
+                "tags": [
+                    "User_Z"
+                ],
+                "description": "create UserZ",
+                "operationId": "UserZController.Post",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "UserName",
+                        "description": "User Name",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "in": "path",
+                        "name": "UserPwd",
+                        "description": "User Password",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "in": "path",
+                        "name": "UserAdminBool",
+                        "description": "User AdminBool",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int64"
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "{int} models.UserZ"
+                    },
+                    "403": {
+                        "description": "body is empty"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "User_Z"
+                ],
+                "description": "create UserZ",
+                "operationId": "UserZController.Post",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "UserName",
+                        "description": "User Name",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "in": "path",
+                        "name": "UserPwd",
+                        "description": "User Password",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "in": "path",
+                        "name": "UserAdminBool",
+                        "description": "User AdminBool",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int64"
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "{int} models.UserZ"
+                    },
+                    "403": {
+                        "description": "body is empty"
+                    }
+                }
             },
             "post": {
                 "tags": [
@@ -1589,13 +2005,26 @@
                 "operationId": "UserZController.Post",
                 "parameters": [
                     {
-                        "in": "body",
-                        "name": "body",
-                        "description": "body for UserZ content",
+                        "in": "path",
+                        "name": "UserName",
+                        "description": "User Name",
                         "required": true,
-                        "schema": {
-                            "$ref": "#/definitions/models.UserZ"
-                        }
+                        "type": "string"
+                    },
+                    {
+                        "in": "path",
+                        "name": "UserPwd",
+                        "description": "User Password",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "in": "path",
+                        "name": "UserAdminBool",
+                        "description": "User AdminBool",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int64"
                     }
                 ],
                 "responses": {
@@ -1604,6 +2033,112 @@
                     },
                     "403": {
                         "description": "body is empty"
+                    }
+                }
+            }
+        },
+        "/User_Z/Sign/{userNamePwd}": {
+            "get": {
+                "tags": [
+                    "User_Z"
+                ],
+                "description": "get UserZ by userNamePwd",
+                "operationId": "UserZController.SignUser",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "userNamePwd",
+                        "description": "true",
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "schema": {
+                            "$ref": "#/definitions/models.UserZ"
+                        }
+                    },
+                    "403": {
+                        "description": ":userNamePwd is empty"
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "User_Z"
+                ],
+                "description": "get UserZ by userNamePwd",
+                "operationId": "UserZController.SignUser",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "userNamePwd",
+                        "description": "true",
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "schema": {
+                            "$ref": "#/definitions/models.UserZ"
+                        }
+                    },
+                    "403": {
+                        "description": ":userNamePwd is empty"
+                    }
+                }
+            }
+        },
+        "/User_Z/UserUpdate/{userupdate}": {
+            "get": {
+                "tags": [
+                    "User_Z"
+                ],
+                "description": "get UserZ by userupdate",
+                "operationId": "UserZController.GetUpdateUserAdminBool",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "userupdate",
+                        "description": "The key for staticblock",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "schema": {
+                            "$ref": "#/definitions/models.UserZ"
+                        }
+                    },
+                    "403": {
+                        "description": ":userupdate is empty"
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "User_Z"
+                ],
+                "description": "get UserZ by userupdate",
+                "operationId": "UserZController.GetUpdateUserAdminBool",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "userupdate",
+                        "description": "The key for staticblock",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "schema": {
+                            "$ref": "#/definitions/models.UserZ"
+                        }
+                    },
+                    "403": {
+                        "description": ":userupdate is empty"
                     }
                 }
             }
@@ -1865,6 +2400,12 @@
         }
     },
     "definitions": {
+        ".float": {
+            "type": "object"
+        },
+        ".strinng": {
+            "type": "object"
+        },
         "models.DMoudleZ": {
             "title": "DMoudleZ",
             "type": "object",

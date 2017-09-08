@@ -40,11 +40,6 @@ func init() {
 			),
 		),
 
-		beego.NSNamespace("/Group_Z",
-			beego.NSInclude(
-				&controllers.GroupZController{},
-			),
-		),
 
 		beego.NSNamespace("/Level_Z",
 			beego.NSInclude(

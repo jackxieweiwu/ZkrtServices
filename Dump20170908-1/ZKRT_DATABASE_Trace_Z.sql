@@ -1,6 +1,8 @@
+CREATE DATABASE  IF NOT EXISTS `ZKRT_DATABASE` /*!40100 DEFAULT CHARACTER SET latin1 */;
+USE `ZKRT_DATABASE`;
 -- MySQL dump 10.13  Distrib 5.7.19, for Linux (x86_64)
 --
--- Host: localhost    Database: ZKRT_DATABSE
+-- Host: localhost    Database: ZKRT_DATABASE
 -- ------------------------------------------------------
 -- Server version	5.7.19-0ubuntu0.17.04.1
 
@@ -16,31 +18,33 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `Moudle_Z`
+-- Table structure for table `Trace_Z`
 --
 
-DROP TABLE IF EXISTS `Moudle_Z`;
+DROP TABLE IF EXISTS `Trace_Z`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `Moudle_Z` (
-  `MoudleID` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `Trace_Z` (
+  `TraceId` int(11) NOT NULL AUTO_INCREMENT,
   `DroneID` varchar(100) NOT NULL,
-  `ModuleName` varchar(225) NOT NULL,
-  `MoudleBool` int(11) NOT NULL,
-  `MoudleDateTime` datetime NOT NULL,
-  `MoudleDate` date NOT NULL,
-  PRIMARY KEY (`MoudleID`),
-  UNIQUE KEY `MoudleID_UNIQUE` (`MoudleID`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `DMoudleId` int(11) DEFAULT NULL,
+  `Lat` float NOT NULL,
+  `Lng` float NOT NULL,
+  `WayBool` int(11) NOT NULL,
+  `TraceDateTime` datetime NOT NULL,
+  `TraceDate` date NOT NULL,
+  PRIMARY KEY (`TraceId`),
+  UNIQUE KEY `TraceId_UNIQUE` (`TraceId`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `Moudle_Z`
+-- Dumping data for table `Trace_Z`
 --
 
-LOCK TABLES `Moudle_Z` WRITE;
-/*!40000 ALTER TABLE `Moudle_Z` DISABLE KEYS */;
-/*!40000 ALTER TABLE `Moudle_Z` ENABLE KEYS */;
+LOCK TABLES `Trace_Z` WRITE;
+/*!40000 ALTER TABLE `Trace_Z` DISABLE KEYS */;
+/*!40000 ALTER TABLE `Trace_Z` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -52,4 +56,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-09-05 22:35:27
+-- Dump completed on 2017-09-08 23:03:41

@@ -2,17 +2,50 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="945d673d-3b05-46b0-b1c0-46ab938466b0" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Dump20170905-2/ZKRT_DATABSE_DMoudle_Z.sql" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Dump20170905-2/ZKRT_DATABSE_DroneMsg_Z.sql" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Dump20170905-2/ZKRT_DATABSE_Gas_Z.sql" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Dump20170905-2/ZKRT_DATABSE_Gasres_Z.sql" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Dump20170905-2/ZKRT_DATABSE_Group_Z.sql" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Dump20170905-2/ZKRT_DATABSE_Level_Z.sql" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Dump20170905-2/ZKRT_DATABSE_Log_Z.sql" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Dump20170905-2/ZKRT_DATABSE_Moudle_Z.sql" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Dump20170905-2/ZKRT_DATABSE_Trace_Z.sql" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Dump20170905-2/ZKRT_DATABSE_User_Z.sql" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Dump20170905-2/ZKRT_DATABSE_Video_Z.sql" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Dump20170905-2/ZKRT_DATABSE_DMoudle_Z.sql" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Dump20170905-2/ZKRT_DATABSE_DroneMsg_Z.sql" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Dump20170905-2/ZKRT_DATABSE_Gas_Z.sql" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Dump20170905-2/ZKRT_DATABSE_Gasres_Z.sql" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Dump20170905-2/ZKRT_DATABSE_Group_Z.sql" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Dump20170905-2/ZKRT_DATABSE_Level_Z.sql" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Dump20170905-2/ZKRT_DATABSE_Log_Z.sql" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Dump20170905-2/ZKRT_DATABSE_Moudle_Z.sql" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Dump20170905-2/ZKRT_DATABSE_Trace_Z.sql" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Dump20170905-2/ZKRT_DATABSE_User_Z.sql" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Dump20170905-2/ZKRT_DATABSE_Video_Z.sql" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/controllers/Group_Z.go" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lastupdate.tmp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/models/Group_Z.go" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Dump20170905-2/ZKRT_DATABSE_DMoudle_Z.sql" afterPath="$PROJECT_DIR$/Dump20170908-1/ZKRT_DATABASE_DMoudle_Z.sql" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Dump20170905-2/ZKRT_DATABSE_DroneMsg_Z.sql" afterPath="$PROJECT_DIR$/Dump20170908-1/ZKRT_DATABASE_DroneMsg_Z.sql" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Dump20170905-2/ZKRT_DATABSE_Gas_Z.sql" afterPath="$PROJECT_DIR$/Dump20170908-1/ZKRT_DATABASE_Gas_Z.sql" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Dump20170905-2/ZKRT_DATABSE_Gasres_Z.sql" afterPath="$PROJECT_DIR$/Dump20170908-1/ZKRT_DATABASE_Gasres_Z.sql" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Dump20170905-2/ZKRT_DATABSE_Level_Z.sql" afterPath="$PROJECT_DIR$/Dump20170908-1/ZKRT_DATABASE_Level_Z.sql" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Dump20170905-2/ZKRT_DATABSE_Log_Z.sql" afterPath="$PROJECT_DIR$/Dump20170908-1/ZKRT_DATABASE_Log_Z.sql" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Dump20170905-2/ZKRT_DATABSE_Moudle_Z.sql" afterPath="$PROJECT_DIR$/Dump20170908-1/ZKRT_DATABASE_Moudle_Z.sql" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Dump20170905-2/ZKRT_DATABSE_Trace_Z.sql" afterPath="$PROJECT_DIR$/Dump20170908-1/ZKRT_DATABASE_Trace_Z.sql" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Dump20170905-2/ZKRT_DATABSE_User_Z.sql" afterPath="$PROJECT_DIR$/Dump20170908-1/ZKRT_DATABASE_User_Z.sql" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Dump20170905-2/ZKRT_DATABSE_Video_Z.sql" afterPath="$PROJECT_DIR$/Dump20170908-1/ZKRT_DATABASE_Video_Z.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ZkrtServices" afterPath="$PROJECT_DIR$/ZkrtServices" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/d93092dd-1b44-43c6-be53-5b87fe127c67.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/d93092dd-1b44-43c6-be53-5b87fe127c67.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/DroneMsg_Z.go" afterPath="$PROJECT_DIR$/controllers/DroneMsg_Z.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/Level_Z.go" afterPath="$PROJECT_DIR$/controllers/Level_Z.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/Moudle_Z.go" afterPath="$PROJECT_DIR$/controllers/Moudle_Z.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/User_Z.go" afterPath="$PROJECT_DIR$/controllers/User_Z.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.go" afterPath="$PROJECT_DIR$/main.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/DroneMsg_Z.go" afterPath="$PROJECT_DIR$/models/DroneMsg_Z.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/Level_Z.go" afterPath="$PROJECT_DIR$/models/Level_Z.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/Moudle_Z.go" afterPath="$PROJECT_DIR$/models/Moudle_Z.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/User_Z.go" afterPath="$PROJECT_DIR$/models/User_Z.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routers/commentsRouter____home_jack_GoProject_src_ZkrtServices_controllers.go" afterPath="$PROJECT_DIR$/routers/commentsRouter____home_jack_GoProject_src_ZkrtServices_controllers.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routers/commentsRouter_controllers.go" afterPath="$PROJECT_DIR$/routers/commentsRouter_controllers.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routers/router.go" afterPath="$PROJECT_DIR$/routers/router.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/swagger/swagger.json" afterPath="$PROJECT_DIR$/swagger/swagger.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/swagger/swagger.yml" afterPath="$PROJECT_DIR$/swagger/swagger.yml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -32,12 +65,7 @@
     <expand>
       <path>
         <item name="" type="eadb38e5:DatabaseStructure$Root" />
-        <item name="ZKRT_DATABSE@localhost" type="e3449647:DbNodeDescriptor" />
-      </path>
-      <path>
-        <item name="" type="eadb38e5:DatabaseStructure$Root" />
-        <item name="ZKRT_DATABSE@localhost" type="e3449647:DbNodeDescriptor" />
-        <item name="ZKRT_DATABSE" type="e3449647:DbNodeDescriptor" />
+        <item name="ZKRT_DATABASE@localhost" type="e3449647:DbNodeDescriptor" />
       </path>
     </expand>
     <select />
@@ -50,58 +78,34 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="User_Z.go" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/controllers/User_Z.go">
+      <file leaf-file-name="DroneMsg_Z.go" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/models/DroneMsg_Z.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="283">
-              <caret line="82" column="26" lean-forward="false" selection-start-line="82" selection-start-column="26" selection-end-line="82" selection-end-column="26" />
+            <state relative-caret-position="378">
+              <caret line="29" column="35" lean-forward="false" selection-start-line="29" selection-start-column="26" selection-end-line="29" selection-end-column="35" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ZKRT_DATABSE_Gas_Z.sql" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Dump20170905-2/ZKRT_DATABSE_Gas_Z.sql">
+      <file leaf-file-name="Level_Z.go" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/controllers/Level_Z.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="19" column="2" lean-forward="true" selection-start-line="19" selection-start-column="2" selection-end-line="19" selection-end-column="2" />
+            <state relative-caret-position="270">
+              <caret line="23" column="30" lean-forward="false" selection-start-line="23" selection-start-column="30" selection-end-line="23" selection-end-column="30" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Level_Z.go" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/models/Level_Z.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="252">
+              <caret line="21" column="20" lean-forward="false" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="20" />
               <folding>
-                <marker date="1504622127000" expanded="true" signature="205:269" ph="/*!40101 SET... " />
-                <marker date="1504622127000" expanded="true" signature="271:337" ph="/*!40101 SET... " />
-                <marker date="1504622127000" expanded="true" signature="339:403" ph="/*!40101 SET... " />
-                <marker date="1504622127000" expanded="true" signature="405:431" ph="/*!40101 SET... " />
-                <marker date="1504622127000" expanded="true" signature="433:475" ph="/*!40103 SET... " />
-                <marker date="1504622127000" expanded="true" signature="477:511" ph="/*!40103 SET... " />
-                <marker date="1504622127000" expanded="true" signature="513:580" ph="/*!40014 SET... " />
-                <marker date="1504622127000" expanded="true" signature="582:664" ph="/*!40014 SET... " />
-                <marker date="1504622127000" expanded="true" signature="666:740" ph="/*!40101 SET... " />
-                <marker date="1504622127000" expanded="true" signature="742:797" ph="/*!40111 SET... " />
-                <marker date="1504622127000" expanded="true" signature="844:872" ph="DROP TABLE I... " />
-                <marker date="1504622127000" expanded="true" signature="874:935" ph="/*!40101 SET... " />
-                <marker date="1504622127000" expanded="true" signature="937:980" ph="/*!40101 SET... " />
-                <marker date="1504622127000" expanded="true" signature="982:1386" ph="CREATE TABLE... Gas_Z" />
-                <marker date="1504622127000" expanded="true" signature="1388:1443" ph="/*!40101 SET... " />
-                <marker date="1504622127000" expanded="true" signature="1514:1558" ph="/*!40000 ALT... " />
-                <marker date="1504622127000" expanded="true" signature="1560:1603" ph="/*!40000 ALT... " />
-                <marker date="1504622127000" expanded="true" signature="1620:1660" ph="/*!40103 SET... " />
-                <marker date="1504622127000" expanded="true" signature="1663:1701" ph="/*!40101 SET... " />
-                <marker date="1504622127000" expanded="true" signature="1703:1761" ph="/*!40014 SET... " />
-                <marker date="1504622127000" expanded="true" signature="1763:1811" ph="/*!40014 SET... " />
-                <marker date="1504622127000" expanded="true" signature="1813:1875" ph="/*!40101 SET... " />
-                <marker date="1504622127000" expanded="true" signature="1877:1941" ph="/*!40101 SET... " />
-                <marker date="1504622127000" expanded="true" signature="1943:2005" ph="/*!40101 SET... " />
-                <marker date="1504622127000" expanded="true" signature="2007:2047" ph="/*!40111 SET... " />
+                <element signature="e#16#99#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="router.go" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/routers/router.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="561">
-              <caret line="67" column="27" lean-forward="false" selection-start-line="67" selection-start-column="20" selection-end-line="67" selection-end-column="27" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -111,11 +115,35 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>EnableAdmin</find>
-      <find>AddUserZ</find>
-      <find>GetUserZById</find>
-      <find>GetOne</find>
       <find>Include</find>
       <find>Cond</find>
+      <find>maxUint64</find>
+      <find>Insert</find>
+      <find>ReadOrCreate</find>
+      <find>SetUserZSign</find>
+      <find>UpdateAdminBool</find>
+      <find>AddUserZ</find>
+      <find>AddLevel</find>
+      <find>Update</find>
+      <find>UpdateLevel</find>
+      <find>LevelUpNumber</find>
+      <find>float</find>
+      <find>Float</find>
+      <find>float32</find>
+      <find>atof32</find>
+      <find>UpdateUserZById</find>
+      <find>Group_Z</find>
+      <find>Group</find>
+      <find>UpdateLevelZByIdName</find>
+      <find>copyrequestbody</find>
+      <find>GetUserZById</find>
+      <find>Delete</find>
+      <find>GetUserOne</find>
+      <find>DeleteUserZ</find>
+      <find>GetOne</find>
+      <find>DeleteLevelZ</find>
+      <find>UpdateLevelId</find>
+      <find>QueryTable</find>
     </findStrings>
   </component>
   <component name="GOROOT" path="/usr/local/go" />
@@ -132,12 +160,19 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/routers/router.go" />
-        <option value="$PROJECT_DIR$/main.go" />
-        <option value="$PROJECT_DIR$/conf/app.conf" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/d93092dd-1b44-43c6-be53-5b87fe127c67/console.sql" />
+        <option value="$PROJECT_DIR$/main.go" />
+        <option value="$PROJECT_DIR$/models/DroneMsg_Z.go" />
+        <option value="$PROJECT_DIR$/routers/router.go" />
+        <option value="$PROJECT_DIR$/routers/commentsRouter_controllers.go" />
+        <option value="$PROJECT_DIR$/models/Moudle_Z.go" />
+        <option value="$PROJECT_DIR$/controllers/Moudle_Z.go" />
+        <option value="$PROJECT_DIR$/conf/app.conf" />
         <option value="$PROJECT_DIR$/models/User_Z.go" />
         <option value="$PROJECT_DIR$/controllers/User_Z.go" />
+        <option value="$PROJECT_DIR$/controllers/Level_Z.go" />
+        <option value="$PROJECT_DIR$/models/Level_Z.go" />
+        <option value="$PROJECT_DIR$/controllers/DroneMsg_Z.go" />
       </list>
     </option>
   </component>
@@ -152,6 +187,28 @@
     <option name="y" value="149" />
     <option name="width" value="1398" />
     <option name="height" value="992" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+          <State>
+            <id>GeneralGo</id>
+          </State>
+          <State>
+            <id>Go</id>
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>GoTypesCompatibility</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -176,6 +233,21 @@
             <path>
               <item name="ZkrtServices" type="b2602c69:ProjectViewProjectNode" />
               <item name="ZkrtServices" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ZkrtServices" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ZkrtServices" type="462c0819:PsiDirectoryNode" />
+              <item name="controllers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ZkrtServices" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ZkrtServices" type="462c0819:PsiDirectoryNode" />
+              <item name="models" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ZkrtServices" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ZkrtServices" type="462c0819:PsiDirectoryNode" />
+              <item name="routers" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -224,27 +296,37 @@
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
   </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
   <component name="ToolWindowManager">
     <frame x="697" y="149" width="1857" height="1092" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32979852" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32944915" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32979852" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="JSON Viewer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32944915" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2520684" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="JSON Utils" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32979852" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32767764" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32873806" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="JSON Viewer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32984003" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13734142" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="JSON Utils" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32984003" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32984003" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3993644" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.45811242" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32767764" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -262,168 +344,11 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="21" />
+      <option name="time" value="113" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/models/Level_Z.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="23" column="1" lean-forward="false" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
-          <folding>
-            <element signature="e#16#106#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routers/router.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="20" column="37" lean-forward="false" selection-start-line="20" selection-start-column="37" selection-end-line="20" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/DMoudle_Z.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="18" column="39" lean-forward="false" selection-start-line="18" selection-start-column="29" selection-end-line="18" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/Level_Z.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#16#106#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routers/router.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="20" column="37" lean-forward="false" selection-start-line="20" selection-start-column="37" selection-end-line="20" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/DMoudle_Z.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/Level_Z.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="23" column="1" lean-forward="false" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
-          <folding>
-            <element signature="e#16#106#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routers/router.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="20" column="37" lean-forward="false" selection-start-line="20" selection-start-column="37" selection-end-line="20" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/DMoudle_Z.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="24" column="1" lean-forward="true" selection-start-line="24" selection-start-column="1" selection-end-line="24" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/Level_Z.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="23" column="1" lean-forward="false" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
-          <folding>
-            <element signature="e#16#106#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routers/router.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="20" column="37" lean-forward="false" selection-start-line="20" selection-start-column="37" selection-end-line="20" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/DMoudle_Z.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="18" column="39" lean-forward="false" selection-start-line="18" selection-start-column="29" selection-end-line="18" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/Level_Z.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="23" column="1" lean-forward="true" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
-          <folding>
-            <element signature="e#16#106#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routers/router.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="20" column="37" lean-forward="false" selection-start-line="20" selection-start-column="37" selection-end-line="20" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/DMoudle_Z.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="18" column="39" lean-forward="false" selection-start-line="18" selection-start-column="29" selection-end-line="18" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/Level_Z.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#16#106#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/d93092dd-1b44-43c6-be53-5b87fe127c67/console.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/Level_Z.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#16#106#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/routers/router.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="960">
@@ -445,13 +370,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/Group_Z.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1875">
-          <caret line="133" column="21" lean-forward="true" selection-start-line="133" selection-start-column="21" selection-end-line="133" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/models/Group_Z.go" />
     <entry file="file://$PROJECT_DIR$/routers/router.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="960">
@@ -466,13 +385,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/Group_Z.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="855">
-          <caret line="65" column="27" lean-forward="false" selection-start-line="65" selection-start-column="27" selection-end-line="65" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/models/Group_Z.go" />
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/d93092dd-1b44-43c6-be53-5b87fe127c67/console.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -480,35 +393,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/Video_Z.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/Group_Z.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="735">
-          <caret line="57" column="45" lean-forward="true" selection-start-line="57" selection-start-column="45" selection-end-line="57" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/controllers/DMoudle_Z.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="23" column="33" lean-forward="true" selection-start-line="23" selection-start-column="33" selection-end-line="23" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding>
-            <element signature="e#14#146#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -516,15 +404,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="196">
           <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/conf/app.conf">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" column="13" lean-forward="true" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -532,17 +411,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/Level_Z.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1607">
-          <caret line="23" column="1" lean-forward="false" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
-          <folding>
-            <element signature="e#16#106#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -551,35 +419,10 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lastupdate.tmp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/Level_Z.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="55" column="33" lean-forward="false" selection-start-line="55" selection-start-column="27" selection-end-line="55" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/routers/commentsRouter____home_jack_GoProject_src_ZkrtServices_controllers.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="18">
           <caret line="9" column="77" lean-forward="false" selection-start-line="9" selection-start-column="59" selection-end-line="9" selection-end-column="77" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routers/commentsRouter_controllers.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="810">
-          <caret line="54" column="36" lean-forward="true" selection-start-line="54" selection-start-column="36" selection-end-line="54" selection-end-column="36" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -587,7 +430,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="418">
           <caret line="882" column="0" lean-forward="false" selection-start-line="882" selection-start-column="0" selection-end-line="882" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -595,15 +437,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
           <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../github.com/astaxie/beego/router.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="834" column="0" lean-forward="false" selection-start-line="834" selection-start-column="0" selection-end-line="834" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -611,7 +444,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="228">
           <caret line="1153" column="0" lean-forward="false" selection-start-line="1153" selection-start-column="0" selection-end-line="1153" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -623,85 +455,262 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/d93092dd-1b44-43c6-be53-5b87fe127c67/console.sql">
+    <entry file="file://$PROJECT_DIR$/Dump20170905-2/ZKRT_DATABSE_Gas_Z.sql" />
+    <entry file="file://$PROJECT_DIR$/lastupdate.tmp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="7" column="59" lean-forward="true" selection-start-line="7" selection-start-column="59" selection-end-line="7" selection-end-column="59" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/go/src/net/http/server.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="1800" column="0" lean-forward="false" selection-start-line="1800" selection-start-column="0" selection-end-line="1800" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/go/src/reflect/value.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="301" column="0" lean-forward="false" selection-start-line="301" selection-start-column="0" selection-end-line="301" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../github.com/astaxie/beego/router.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="814" column="0" lean-forward="false" selection-start-line="814" selection-start-column="0" selection-end-line="814" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/go/src/runtime/asm_amd64.s">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="2336" column="0" lean-forward="false" selection-start-line="2336" selection-start-column="0" selection-end-line="2336" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/Video_Z.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="13" column="56" lean-forward="true" selection-start-line="13" selection-start-column="56" selection-end-line="13" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/dbf26229/d93092dd-1b44-43c6-be53-5b87fe127c67/ZKRT_DATABSE.User_Z">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/go/src/database/sql/sql.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="218">
+          <caret line="187" column="9" lean-forward="false" selection-start-line="187" selection-start-column="4" selection-end-line="187" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/go/src/builtin/builtin.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="35" column="5" lean-forward="false" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../github.com/astaxie/beego/context/input.go">
+    <entry file="file://$PROJECT_DIR$/../github.com/astaxie/beego/orm/orm_raw.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="49" column="4" lean-forward="false" selection-start-line="49" selection-start-column="4" selection-end-line="49" selection-end-column="4" />
-          <folding />
+        <state relative-caret-position="158">
+          <caret line="269" column="0" lean-forward="false" selection-start-line="269" selection-start-column="0" selection-end-line="269" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../github.com/astaxie/beego/config.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="149" column="0" lean-forward="false" selection-start-line="149" selection-start-column="0" selection-end-line="149" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/d93092dd-1b44-43c6-be53-5b87fe127c67/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/Log_Z.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="19" column="1" lean-forward="false" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
         </state>
       </provider>
     </entry>
     <entry file="file:///usr/local/go/src/strconv/atoi.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="577">
-          <caret line="196" column="17" lean-forward="true" selection-start-line="196" selection-start-column="17" selection-end-line="196" selection-end-column="17" />
+        <state relative-caret-position="282">
+          <caret line="16" column="83" lean-forward="false" selection-start-line="16" selection-start-column="78" selection-end-line="16" selection-end-column="83" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/User_Z.go">
+    <entry file="file:///usr/local/go/src/strconv/atof.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="53" column="21" lean-forward="true" selection-start-line="53" selection-start-column="21" selection-end-line="53" selection-end-column="21" />
-          <folding />
+        <state relative-caret-position="720">
+          <caret line="535" column="22" lean-forward="false" selection-start-line="535" selection-start-column="15" selection-end-line="535" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/Group_Z.go" />
+    <entry file="file://$PROJECT_DIR$/controllers/Group_Z.go" />
+    <entry file="file://$PROJECT_DIR$/routers/commentsRouter_controllers.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="433">
+          <caret line="169" column="0" lean-forward="true" selection-start-line="169" selection-start-column="0" selection-end-line="169" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/routers/router.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="67" column="27" lean-forward="false" selection-start-line="67" selection-start-column="20" selection-end-line="67" selection-end-column="27" />
+        <state relative-caret-position="72">
+          <caret line="35" column="0" lean-forward="true" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../github.com/astaxie/beego/context/input.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="277" column="0" lean-forward="false" selection-start-line="277" selection-start-column="0" selection-end-line="277" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/Moudle_Z.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="25" column="1" lean-forward="true" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/Moudle_Z.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="454">
+          <caret line="47" column="6" lean-forward="false" selection-start-line="47" selection-start-column="6" selection-end-line="47" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../github.com/astaxie/beego/orm/orm.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="230" column="0" lean-forward="false" selection-start-line="230" selection-start-column="0" selection-end-line="230" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/conf/app.conf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../github.com/astaxie/beego/orm/types.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="210" column="78" lean-forward="true" selection-start-line="210" selection-start-column="8" selection-end-line="210" selection-end-column="78" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/controllers/User_Z.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="283">
-          <caret line="82" column="26" lean-forward="false" selection-start-line="82" selection-start-column="26" selection-end-line="82" selection-end-column="26" />
+        <state relative-caret-position="145">
+          <caret line="182" column="24" lean-forward="false" selection-start-line="182" selection-start-column="24" selection-end-line="182" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/User_Z.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="282">
+          <caret line="173" column="77" lean-forward="true" selection-start-line="173" selection-start-column="4" selection-end-line="173" selection-end-column="77" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/Level_Z.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="23" column="30" lean-forward="false" selection-start-line="23" selection-start-column="30" selection-end-line="23" selection-end-column="30" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Dump20170905-2/ZKRT_DATABSE_Gas_Z.sql">
+    <entry file="file://$PROJECT_DIR$/models/Level_Z.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="19" column="2" lean-forward="true" selection-start-line="19" selection-start-column="2" selection-end-line="19" selection-end-column="2" />
+        <state relative-caret-position="252">
+          <caret line="21" column="20" lean-forward="false" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="20" />
           <folding>
-            <marker date="1504622127000" expanded="true" signature="205:269" ph="/*!40101 SET... " />
-            <marker date="1504622127000" expanded="true" signature="271:337" ph="/*!40101 SET... " />
-            <marker date="1504622127000" expanded="true" signature="339:403" ph="/*!40101 SET... " />
-            <marker date="1504622127000" expanded="true" signature="405:431" ph="/*!40101 SET... " />
-            <marker date="1504622127000" expanded="true" signature="433:475" ph="/*!40103 SET... " />
-            <marker date="1504622127000" expanded="true" signature="477:511" ph="/*!40103 SET... " />
-            <marker date="1504622127000" expanded="true" signature="513:580" ph="/*!40014 SET... " />
-            <marker date="1504622127000" expanded="true" signature="582:664" ph="/*!40014 SET... " />
-            <marker date="1504622127000" expanded="true" signature="666:740" ph="/*!40101 SET... " />
-            <marker date="1504622127000" expanded="true" signature="742:797" ph="/*!40111 SET... " />
-            <marker date="1504622127000" expanded="true" signature="844:872" ph="DROP TABLE I... " />
-            <marker date="1504622127000" expanded="true" signature="874:935" ph="/*!40101 SET... " />
-            <marker date="1504622127000" expanded="true" signature="937:980" ph="/*!40101 SET... " />
-            <marker date="1504622127000" expanded="true" signature="982:1386" ph="CREATE TABLE... Gas_Z" />
-            <marker date="1504622127000" expanded="true" signature="1388:1443" ph="/*!40101 SET... " />
-            <marker date="1504622127000" expanded="true" signature="1514:1558" ph="/*!40000 ALT... " />
-            <marker date="1504622127000" expanded="true" signature="1560:1603" ph="/*!40000 ALT... " />
-            <marker date="1504622127000" expanded="true" signature="1620:1660" ph="/*!40103 SET... " />
-            <marker date="1504622127000" expanded="true" signature="1663:1701" ph="/*!40101 SET... " />
-            <marker date="1504622127000" expanded="true" signature="1703:1761" ph="/*!40014 SET... " />
-            <marker date="1504622127000" expanded="true" signature="1763:1811" ph="/*!40014 SET... " />
-            <marker date="1504622127000" expanded="true" signature="1813:1875" ph="/*!40101 SET... " />
-            <marker date="1504622127000" expanded="true" signature="1877:1941" ph="/*!40101 SET... " />
-            <marker date="1504622127000" expanded="true" signature="1943:2005" ph="/*!40101 SET... " />
-            <marker date="1504622127000" expanded="true" signature="2007:2047" ph="/*!40111 SET... " />
+            <element signature="e#16#99#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dump20170908-1/ZKRT_DATABASE_Gas_Z.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="630">
+          <caret line="35" column="38" lean-forward="true" selection-start-line="35" selection-start-column="38" selection-end-line="35" selection-end-column="38" />
+          <folding>
+            <marker date="1504883020000" expanded="true" signature="47:87" ph="/*!40100 DEF... " />
+            <marker date="1504883020000" expanded="true" signature="316:380" ph="/*!40101 SET... " />
+            <marker date="1504883020000" expanded="true" signature="382:448" ph="/*!40101 SET... " />
+            <marker date="1504883020000" expanded="true" signature="450:514" ph="/*!40101 SET... " />
+            <marker date="1504883020000" expanded="true" signature="516:542" ph="/*!40101 SET... " />
+            <marker date="1504883020000" expanded="true" signature="544:586" ph="/*!40103 SET... " />
+            <marker date="1504883020000" expanded="true" signature="588:622" ph="/*!40103 SET... " />
+            <marker date="1504883020000" expanded="true" signature="624:691" ph="/*!40014 SET... " />
+            <marker date="1504883020000" expanded="true" signature="693:775" ph="/*!40014 SET... " />
+            <marker date="1504883020000" expanded="true" signature="777:851" ph="/*!40101 SET... " />
+            <marker date="1504883020000" expanded="true" signature="853:908" ph="/*!40111 SET... " />
+            <marker date="1504883020000" expanded="true" signature="955:983" ph="DROP TABLE I... " />
+            <marker date="1504883020000" expanded="true" signature="985:1046" ph="/*!40101 SET... " />
+            <marker date="1504883020000" expanded="true" signature="1048:1091" ph="/*!40101 SET... " />
+            <marker date="1504883020000" expanded="true" signature="1093:1495" ph="CREATE TABLE... Gas_Z" />
+            <marker date="1504883020000" expanded="true" signature="1497:1552" ph="/*!40101 SET... " />
+            <marker date="1504883020000" expanded="true" signature="1623:1667" ph="/*!40000 ALT... " />
+            <marker date="1504883020000" expanded="true" signature="1669:1712" ph="/*!40000 ALT... " />
+            <marker date="1504883020000" expanded="true" signature="1729:1769" ph="/*!40103 SET... " />
+            <marker date="1504883020000" expanded="true" signature="1772:1810" ph="/*!40101 SET... " />
+            <marker date="1504883020000" expanded="true" signature="1812:1870" ph="/*!40014 SET... " />
+            <marker date="1504883020000" expanded="true" signature="1872:1920" ph="/*!40014 SET... " />
+            <marker date="1504883020000" expanded="true" signature="1922:1984" ph="/*!40101 SET... " />
+            <marker date="1504883020000" expanded="true" signature="1986:2050" ph="/*!40101 SET... " />
+            <marker date="1504883020000" expanded="true" signature="2052:2114" ph="/*!40101 SET... " />
+            <marker date="1504883020000" expanded="true" signature="2116:2156" ph="/*!40111 SET... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/DroneMsg_Z.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="22" column="33" lean-forward="false" selection-start-line="22" selection-start-column="33" selection-end-line="22" selection-end-column="33" />
+          <folding>
+            <element signature="e#21#122#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/DroneMsg_Z.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="29" column="35" lean-forward="false" selection-start-line="29" selection-start-column="26" selection-end-line="29" selection-end-column="35" />
+          <folding />
         </state>
       </provider>
     </entry>

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="ZKRT_DATABSE@localhost" uuid="d93092dd-1b44-43c6-be53-5b87fe127c67">
+    <data-source source="LOCAL" name="ZKRT_DATABASE@localhost" uuid="d93092dd-1b44-43c6-be53-5b87fe127c67">
       <driver-ref>mysql</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://localhost:3306/ZKRT_DATABSE</jdbc-url>
+      <jdbc-url>jdbc:mysql://localhost:3306/ZKRT_DATABASE</jdbc-url>
       <driver-properties>
         <property name="autoReconnect" value="true" />
         <property name="zeroDateTimeBehavior" value="convertToNull" />

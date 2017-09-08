@@ -2,7 +2,6 @@ package models
 
 import (
 	"errors"
-	"fmt"
 	"reflect"
 	"strings"
 	"time"
@@ -37,13 +36,14 @@ func AddLevelZ(m *LevelZ) (id int64, err error) {
 
 // GetLevelZById retrieves LevelZ by Id. Returns error if
 // Id doesn't exist
-func GetLevelZById(id int) (v *LevelZ, err error) {
+func GetLevelZById(levelname string) (v LevelZ,err error) {
 	o := orm.NewOrm()
-	v = &LevelZ{Id: id}
-	if err = o.Read(v); err == nil {
-		return v, nil
+	var level LevelZ
+	err = o.QueryTable(new(LevelZ)).Filter("LevelName", levelname).One(&level)
+	if err == nil {
+		return level, nil
 	}
-	return nil, err
+	return level,err
 }
 
 // GetAllLevelZ retrieves all LevelZ matches certain condition. Returns empty list if
@@ -126,30 +126,29 @@ func GetAllLevelZ(query map[string]string, fields []string, sortby []string, ord
 
 // UpdateLevelZ updates LevelZ by Id and returns error if
 // the record to be updated doesn't exist
-func UpdateLevelZById(m *LevelZ) (err error) {
+func UpdateLevelZNumberByName(level string,levelnumber int,levelupnumber int) (id int64,err error) {
 	o := orm.NewOrm()
-	v := LevelZ{Id: m.Id}
-	// ascertain id exists in the database
-	if err = o.Read(&v); err == nil {
-		var num int64
-		if num, err = o.Update(m); err == nil {
-			fmt.Println("Number of records updated in database:", num)
-		}
-	}
+	id, err = o.QueryTable(new(LevelZ)).Filter("LevelName", level).Update(orm.Params{
+		"LevelNumber": levelnumber,
+		"LevelUpNumber": levelupnumber,
+	})
+	return
+}
+
+func UpdateLevelZByIdName(newName string,level string,levelnumber int,levelupnumber int) (id int64,err error) {
+	o := orm.NewOrm()
+	id, err = o.QueryTable(new(LevelZ)).Filter("LevelName", level).Update(orm.Params{
+		"LevelNumber": levelnumber,
+		"LevelUpNumber": levelupnumber,
+		"LevelName": newName,
+	})
 	return
 }
 
 // DeleteLevelZ deletes LevelZ by Id and returns error if
 // the record to be deleted doesn't exist
-func DeleteLevelZ(id int) (err error) {
+func DeleteLevelZ(levelName string) (id int64,err error) {
 	o := orm.NewOrm()
-	v := LevelZ{Id: id}
-	// ascertain id exists in the database
-	if err = o.Read(&v); err == nil {
-		var num int64
-		if num, err = o.Delete(&LevelZ{Id: id}); err == nil {
-			fmt.Println("Number of records deleted in database:", num)
-		}
-	}
+	id ,err = o.QueryTable(new(LevelZ)).Filter("UserName", levelName).Delete()
 	return
 }

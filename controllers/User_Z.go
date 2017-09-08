@@ -2,12 +2,11 @@ package controllers
 
 import (
 	"ZkrtServices/models"
-	"encoding/json"
 	"errors"
 	"strconv"
 	"strings"
-
 	"github.com/astaxie/beego"
+	"time"
 )
 
 // UserZController operations for UserZ
@@ -17,47 +16,73 @@ type UserZController struct {
 
 // URLMapping ...
 func (c *UserZController) URLMapping() {
-	c.Mapping("Post", c.Post)
-	c.Mapping("GetOne", c.GetOne)
+	c.Mapping("AddUser", c.AddUser)
+	c.Mapping("GetUserOne", c.GetOne)
 	c.Mapping("GetAll", c.GetAll)
 	c.Mapping("Sign", c.SignUser)
-	c.Mapping("Put", c.Put)
-	c.Mapping("Delete", c.Delete)
+	c.Mapping("UserUpdate", c.GetUpdateUserAdminBool)
+	c.Mapping("UserDel", c.Delete)
 }
 
 // Post ...
 // @Title Post
 // @Description create UserZ
-// @Param	body		body 	models.UserZ	true		"body for UserZ content"
+// @Param	UserName		query 	string	true		"User Name"
+// @Param	UserPwd			query 	string	true		"User Password"
+// @Param	UserAdminBool	query 	int	true		    "User AdminBool"
 // @Success 201 {int} models.UserZ
 // @Failure 403 body is empty
-// @router / [post]
-func (c *UserZController) Post() {
-	var v models.UserZ
-	if err := json.Unmarshal(c.Ctx.Input.RequestBody, &v); err == nil {
-		if _, err := models.AddUserZ(&v); err == nil {
-			c.Ctx.Output.SetStatus(201)
-			c.Data["json"] = v
-		} else {
-			c.Data["json"] = err.Error()
-		}
-	} else {
+// @router /AddUser/:userNamePwd [post,get,put]
+func (c *UserZController) AddUser() {
+	userNamePwd := c.Ctx.Input.Param(":userNamePwd")
+	struser := strings.Split(userNamePwd,",")
+	num, _ := strconv.Atoi(struser[2])
+	var user models.UserZ
+	user.UserName = struser[0]
+	user.UserPwd = struser[1]
+	user.UserAdminBool = num
+	user.LoginTime = time.Now()
+	user.UserData = time.Now()
+
+	if v,err := models.AddUserZ(&user); err != nil {
 		c.Data["json"] = err.Error()
+	} else {
+		c.Data["json"] = v
 	}
 	c.ServeJSON()
 }
 
 // GetOne ...
 // @Title Get One
-// @Description get UserZ by id
-// @Param	id		path 	string	true		"The key for staticblock"
+// @Description get UserZ by userName
+// @Param	userName	path 	string	true		"The key for staticblock"
 // @Success 200 {object} models.UserZ
 // @Failure 403 :id is empty
-// @router /:id [get]
+// @router /GetUserOne/:name [get,post,put]
 func (c *UserZController) GetOne() {
-	idStr := c.Ctx.Input.Param(":id")
-	id, _ := strconv.Atoi(idStr)
-	v, err := models.GetUserZById(id)
+	idStr := c.Ctx.Input.Param(":name")
+	/*id, _ := strconv.Atoi(idStr)*/
+	v, err := models.GetUserZById(idStr)
+	if err != nil {
+		c.Data["json"] = err.Error()
+	} else {
+		c.Data["json"] = v
+	}
+	c.ServeJSON()
+}
+
+// GetUpdateUserAdminBool ...
+// @Title GetUpdateUserAdminBool
+// @Description get UserZ by userupdate
+// @Param	UserName		query 	string	true		"User Name"
+// @Param	UserAdminBool	query 	int	true		    "User AdminBool"
+// @Success 200 {object} models.UserZ
+// @Failure 403 :userupdate is empty
+// @router /UserUpdate/:userupdate [get,post,put]
+func (c *UserZController) GetUpdateUserAdminBool()  {
+	updatecam := c.Ctx.Input.Param(":userupdate")
+	user := strings.Split(updatecam,",")
+	v, err := models.UpdateAdminBool(user[0],user[1])
 	if err != nil {
 		c.Data["json"] = err.Error()
 	} else {
@@ -67,16 +92,18 @@ func (c *UserZController) GetOne() {
 }
 
 // SetUser ...
-// @Title Sign
-// @Description get UserZ by username userpwd
-// @Param	username userpwd path 	string	true		"The key for staticblock"
+// @Title SignUser
+// @Description get UserZ by userNamePwd
+// @Param	UserName		query 	string	true		"User Password"
+// @Param	UserPwd			query 	string	true		"User Password"
 // @Success 200 {object} models.UserZ
-// @Failure 403 :username is empty
-// @router /Sign [get]
+// @Failure 403 :userNamePwd is empty
+// @router /Sign/:userNamePwd [get,post,put]
 func (c * UserZController) SignUser()  {
-	userName := c.Ctx.Input.Param(":username")
-	userPwd := c.Ctx.Input.Param(":userPwd")
-	v, err := models.SetUserZSign(userName,userPwd)
+	userNamePwd := c.Ctx.Input.Param(":userNamePwd")
+	struser := strings.Split(userNamePwd,",")
+
+	v, err := models.SetUserZSign(struser[0],struser[1])
 	if err != nil {
 		c.Data["json"] = err.Error()
 	} else {
@@ -148,42 +175,18 @@ func (c *UserZController) GetAll() {
 	c.ServeJSON()
 }
 
-// Put ...
-// @Title Put
-// @Description update the UserZ
-// @Param	id		path 	string	true		"The id you want to update"
-// @Param	body		body 	models.UserZ	true		"body for UserZ content"
-// @Success 200 {object} models.UserZ
-// @Failure 403 :id is not int
-// @router /:id [put]
-func (c *UserZController) Put() {
-	idStr := c.Ctx.Input.Param(":id")
-	id, _ := strconv.Atoi(idStr)
-	v := models.UserZ{Id: id}
-	if err := json.Unmarshal(c.Ctx.Input.RequestBody, &v); err == nil {
-		if err := models.UpdateUserZById(&v); err == nil {
-			c.Data["json"] = "OK"
-		} else {
-			c.Data["json"] = err.Error()
-		}
-	} else {
-		c.Data["json"] = err.Error()
-	}
-	c.ServeJSON()
-}
-
 // Delete ...
 // @Title Delete
 // @Description delete the UserZ
-// @Param	id		path 	string	true		"The id you want to delete"
+// @Param	userName	path 	string	true		"The id you want to delete"
 // @Success 200 {string} delete success!
-// @Failure 403 id is empty
-// @router /:id [delete]
+// @Failure 403 userName is empty
+// @router /UserDel/:name [delete]
 func (c *UserZController) Delete() {
-	idStr := c.Ctx.Input.Param(":id")
-	id, _ := strconv.Atoi(idStr)
-	if err := models.DeleteUserZ(id); err == nil {
-		c.Data["json"] = "OK"
+	idStr := c.Ctx.Input.Param(":name")
+	//id, _ := strconv.Atoi(idStr)
+	if id,err := models.DeleteUserZ(idStr); err == nil {
+		c.Data["json"] = id
 	} else {
 		c.Data["json"] = err.Error()
 	}

@@ -2,12 +2,12 @@ package controllers
 
 import (
 	"ZkrtServices/models"
-	"encoding/json"
 	"errors"
 	"strconv"
 	"strings"
 
 	"github.com/astaxie/beego"
+	"time"
 )
 
 // LevelZController operations for LevelZ
@@ -17,31 +17,40 @@ type LevelZController struct {
 
 // URLMapping ...
 func (c *LevelZController) URLMapping() {
-	c.Mapping("Post", c.Post)
-	c.Mapping("GetOne", c.GetOne)
-	c.Mapping("GetAll", c.GetAll)
-	c.Mapping("Put", c.Put)
-	c.Mapping("Delete", c.Delete)
+	c.Mapping("AddLevel", c.AddLevelOne)
+	c.Mapping("GetLevelOne", c.GetOne)
+	c.Mapping("GetLevelAll", c.GetAll)
+	c.Mapping("UpdateLevel", c.UpdateLevel)
+	c.Mapping("UpdateLevelId", c.UpdateLevelId)
+	c.Mapping("levelDel", c.Delete)
 }
 
-// Post ...
-// @Title Post
+// AddLevelOne ...
+// @Title AddLevelOne
 // @Description create LevelZ
-// @Param	body		body 	models.LevelZ	true		"body for LevelZ content"
+// @Param	LevelName		string 	models.LevelZ	true
+// @Param	LevelNumber		int 	models.LevelZ	true
+// @Param	LevelUpNumber	int 	models.LevelZ	true
 // @Success 201 {int} models.LevelZ
 // @Failure 403 body is empty
-// @router / [post]
-func (c *LevelZController) Post() {
+// @router /AddLevel/:levelName [post,get]
+func (c *LevelZController) AddLevelOne() {
 	var v models.LevelZ
-	if err := json.Unmarshal(c.Ctx.Input.RequestBody, &v); err == nil {
-		if _, err := models.AddLevelZ(&v); err == nil {
-			c.Ctx.Output.SetStatus(201)
-			c.Data["json"] = v
-		} else {
-			c.Data["json"] = err.Error()
-		}
-	} else {
+	levelName := c.Ctx.Input.Param(":levelName")
+	strName := strings.Split(levelName,",")
+	LevelNumber, _ := strconv.Atoi(strName[1])
+	LevelUpNumber, _ := strconv.Atoi(strName[2])
+
+	v.LevelName = strName[0]
+	v.LevelNumber = LevelNumber
+	v.LevelUpNumber = LevelUpNumber
+	v.LevelDateTime = time.Now()
+	v.LevelDate = time.Now()
+
+	if id,err := models.AddLevelZ(&v); err != nil{
 		c.Data["json"] = err.Error()
+	}else{
+		c.Data["json"] = id
 	}
 	c.ServeJSON()
 }
@@ -49,14 +58,14 @@ func (c *LevelZController) Post() {
 // GetOne ...
 // @Title Get One
 // @Description get LevelZ by id
-// @Param	id		path 	string	true		"The key for staticblock"
+// @Param	LevelName		path 	string	true		"The key for staticblock"
 // @Success 200 {object} models.LevelZ
 // @Failure 403 :id is empty
-// @router /:id [get]
+// @router /GetLevelOne/:LevelName [get,post]
 func (c *LevelZController) GetOne() {
-	idStr := c.Ctx.Input.Param(":id")
-	id, _ := strconv.Atoi(idStr)
-	v, err := models.GetLevelZById(id)
+	idStr := c.Ctx.Input.Param(":LevelName")
+	//id, _ := strconv.Atoi(idStr)
+	v, err := models.GetLevelZById(idStr)
 	if err != nil {
 		c.Data["json"] = err.Error()
 	} else {
@@ -76,7 +85,7 @@ func (c *LevelZController) GetOne() {
 // @Param	offset	query	string	false	"Start position of result set. Must be an integer"
 // @Success 200 {object} models.LevelZ
 // @Failure 403
-// @router / [get]
+// @router /GetLevelAll [get,post]
 func (c *LevelZController) GetAll() {
 	var fields []string
 	var sortby []string
@@ -128,26 +137,48 @@ func (c *LevelZController) GetAll() {
 	c.ServeJSON()
 }
 
-// Put ...
-// @Title Put
+// UpdateLevel ...
+// @Title UpdateLevel
 // @Description update the LevelZ
-// @Param	id		path 	string	true		"The id you want to update"
-// @Param	body		body 	models.LevelZ	true		"body for LevelZ content"
+// @Param	LevelName		string 	models.LevelZ	true
+// @Param	LevelNumber		int 	models.LevelZ	true
+// @Param	LevelUpNumber	int 	models.LevelZ	true
 // @Success 200 {object} models.LevelZ
 // @Failure 403 :id is not int
-// @router /:id [put]
-func (c *LevelZController) Put() {
-	idStr := c.Ctx.Input.Param(":id")
-	id, _ := strconv.Atoi(idStr)
-	v := models.LevelZ{Id: id}
-	if err := json.Unmarshal(c.Ctx.Input.RequestBody, &v); err == nil {
-		if err := models.UpdateLevelZById(&v); err == nil {
-			c.Data["json"] = "OK"
-		} else {
-			c.Data["json"] = err.Error()
-		}
-	} else {
+// @router /UpdateLevel/:levelUpdateName [post,get]
+func (c *LevelZController) UpdateLevel() {
+	levelName := c.Ctx.Input.Param(":levelUpdateName")
+	strName := strings.Split(levelName,",")
+	LevelNumber, _ := strconv.Atoi(strName[1])
+	LevelUpNumber, _ := strconv.Atoi(strName[2])
+
+	if id,err := models.UpdateLevelZNumberByName(strName[0],LevelNumber,LevelUpNumber); err !=nil{
 		c.Data["json"] = err.Error()
+	}else {
+		c.Data["json"] = id
+	}
+	c.ServeJSON()
+}
+// UpdateLevel ...
+// @Title UpdateLevel
+// @Description update the LevelZ
+// @Param	LevelNewName    string 	models.LevelZ	true
+// @Param	LevelName		string 	models.LevelZ	true
+// @Param	LevelNumber		int 	models.LevelZ	true
+// @Param	LevelUpNumber	int 	models.LevelZ	true
+// @Success 200 {object} models.LevelZ
+// @Failure 403 :id is not int
+// @router /UpdateLevelId/:levelUpdateNameId [post,get,put]
+func (c *LevelZController) UpdateLevelId() {
+	levelName := c.Ctx.Input.Param(":levelUpdateNameId")
+	strName := strings.Split(levelName,",")
+	LevelNumber, _ := strconv.Atoi(strName[2])
+	LevelUpNumber, _ := strconv.Atoi(strName[3])
+
+	if id,err := models.UpdateLevelZByIdName(strName[0],strName[1],LevelNumber,LevelUpNumber); err !=nil{
+		c.Data["json"] = err.Error()
+	}else {
+		c.Data["json"] = id
 	}
 	c.ServeJSON()
 }
@@ -155,15 +186,15 @@ func (c *LevelZController) Put() {
 // Delete ...
 // @Title Delete
 // @Description delete the LevelZ
-// @Param	id		path 	string	true		"The id you want to delete"
+// @Param	LevelName		path 	string	true		"The id you want to delete"
 // @Success 200 {string} delete success!
 // @Failure 403 id is empty
-// @router /:id [delete]
+// @router /levelDel/:LevelName [delete]
 func (c *LevelZController) Delete() {
-	idStr := c.Ctx.Input.Param(":id")
-	id, _ := strconv.Atoi(idStr)
-	if err := models.DeleteLevelZ(id); err == nil {
-		c.Data["json"] = "OK"
+	idStr := c.Ctx.Input.Param(":LevelName")
+	//id, _ := strconv.Atoi(idStr)
+	if id, err := models.DeleteLevelZ(idStr); err == nil {
+		c.Data["json"] = id
 	} else {
 		c.Data["json"] = err.Error()
 	}

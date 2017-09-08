@@ -31,8 +31,17 @@ func init() {
 // last inserted Id on success.
 func AddMoudleZ(m *MoudleZ) (id int64, err error) {
 	o := orm.NewOrm()
-	id, err = o.Insert(m)
-	return
+	user := MoudleZ{DroneID:m.DroneID,ModuleName:m.ModuleName,MoudleBool:m.MoudleBool,MoudleDateTime:m.MoudleDateTime,MoudleDate: m.MoudleDate}
+	// 三个返回参数依次为：是否新创建的，对象 Id 值，错误
+	if created, id, err := o.ReadOrCreate(&user, "MoudleDate"); err == nil {
+		if created {
+			return id,nil
+		} else {
+			return 0,err
+		}
+	}
+	//id, err = o.Insert(m)
+	return 0,err
 }
 
 // GetMoudleZById retrieves MoudleZ by Id. Returns error if

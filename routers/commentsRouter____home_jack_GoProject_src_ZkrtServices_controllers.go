@@ -49,17 +49,9 @@ func init() {
 
 	beego.GlobalControllerRouter["ZkrtServices/controllers:DroneMsgZController"] = append(beego.GlobalControllerRouter["ZkrtServices/controllers:DroneMsgZController"],
 		beego.ControllerComments{
-			Method: "Post",
-			Router: `/`,
-			AllowHTTPMethods: []string{"post"},
-			MethodParams: param.Make(),
-			Params: nil})
-
-	beego.GlobalControllerRouter["ZkrtServices/controllers:DroneMsgZController"] = append(beego.GlobalControllerRouter["ZkrtServices/controllers:DroneMsgZController"],
-		beego.ControllerComments{
 			Method: "GetAll",
 			Router: `/`,
-			AllowHTTPMethods: []string{"get"},
+			AllowHTTPMethods: []string{"get","post","put"},
 			MethodParams: param.Make(),
 			Params: nil})
 
@@ -73,17 +65,33 @@ func init() {
 
 	beego.GlobalControllerRouter["ZkrtServices/controllers:DroneMsgZController"] = append(beego.GlobalControllerRouter["ZkrtServices/controllers:DroneMsgZController"],
 		beego.ControllerComments{
-			Method: "Put",
+			Method: "Delete",
 			Router: `/:id`,
-			AllowHTTPMethods: []string{"put"},
+			AllowHTTPMethods: []string{"delete"},
 			MethodParams: param.Make(),
 			Params: nil})
 
 	beego.GlobalControllerRouter["ZkrtServices/controllers:DroneMsgZController"] = append(beego.GlobalControllerRouter["ZkrtServices/controllers:DroneMsgZController"],
 		beego.ControllerComments{
-			Method: "Delete",
-			Router: `/:id`,
-			AllowHTTPMethods: []string{"delete"},
+			Method: "AddDroneMessage",
+			Router: `/AddDrone/:dronemsg`,
+			AllowHTTPMethods: []string{"post","get"},
+			MethodParams: param.Make(),
+			Params: nil})
+
+	beego.GlobalControllerRouter["ZkrtServices/controllers:DroneMsgZController"] = append(beego.GlobalControllerRouter["ZkrtServices/controllers:DroneMsgZController"],
+		beego.ControllerComments{
+			Method: "DroneMsgUpdate",
+			Router: `/updateDrone/:updateDroneMessage`,
+			AllowHTTPMethods: []string{"get","post","put"},
+			MethodParams: param.Make(),
+			Params: nil})
+
+	beego.GlobalControllerRouter["ZkrtServices/controllers:DroneMsgZController"] = append(beego.GlobalControllerRouter["ZkrtServices/controllers:DroneMsgZController"],
+		beego.ControllerComments{
+			Method: "DroneMsgUpdateBool",
+			Router: `/updateDrone/:updateDroneMessage`,
+			AllowHTTPMethods: []string{"get","post","put"},
 			MethodParams: param.Make(),
 			Params: nil})
 
@@ -167,82 +175,50 @@ func init() {
 			MethodParams: param.Make(),
 			Params: nil})
 
-	beego.GlobalControllerRouter["ZkrtServices/controllers:GroupZController"] = append(beego.GlobalControllerRouter["ZkrtServices/controllers:GroupZController"],
-		beego.ControllerComments{
-			Method: "Post",
-			Router: `/`,
-			AllowHTTPMethods: []string{"post"},
-			MethodParams: param.Make(),
-			Params: nil})
-
-	beego.GlobalControllerRouter["ZkrtServices/controllers:GroupZController"] = append(beego.GlobalControllerRouter["ZkrtServices/controllers:GroupZController"],
-		beego.ControllerComments{
-			Method: "GetAll",
-			Router: `/`,
-			AllowHTTPMethods: []string{"get"},
-			MethodParams: param.Make(),
-			Params: nil})
-
-	beego.GlobalControllerRouter["ZkrtServices/controllers:GroupZController"] = append(beego.GlobalControllerRouter["ZkrtServices/controllers:GroupZController"],
-		beego.ControllerComments{
-			Method: "GetOne",
-			Router: `/:id`,
-			AllowHTTPMethods: []string{"get"},
-			MethodParams: param.Make(),
-			Params: nil})
-
-	beego.GlobalControllerRouter["ZkrtServices/controllers:GroupZController"] = append(beego.GlobalControllerRouter["ZkrtServices/controllers:GroupZController"],
-		beego.ControllerComments{
-			Method: "Put",
-			Router: `/:id`,
-			AllowHTTPMethods: []string{"put"},
-			MethodParams: param.Make(),
-			Params: nil})
-
-	beego.GlobalControllerRouter["ZkrtServices/controllers:GroupZController"] = append(beego.GlobalControllerRouter["ZkrtServices/controllers:GroupZController"],
-		beego.ControllerComments{
-			Method: "Delete",
-			Router: `/:id`,
-			AllowHTTPMethods: []string{"delete"},
-			MethodParams: param.Make(),
-			Params: nil})
-
 	beego.GlobalControllerRouter["ZkrtServices/controllers:LevelZController"] = append(beego.GlobalControllerRouter["ZkrtServices/controllers:LevelZController"],
 		beego.ControllerComments{
-			Method: "Post",
-			Router: `/`,
-			AllowHTTPMethods: []string{"post"},
+			Method: "AddLevelOne",
+			Router: `/AddLevel/:levelName`,
+			AllowHTTPMethods: []string{"post","get"},
 			MethodParams: param.Make(),
 			Params: nil})
 
 	beego.GlobalControllerRouter["ZkrtServices/controllers:LevelZController"] = append(beego.GlobalControllerRouter["ZkrtServices/controllers:LevelZController"],
 		beego.ControllerComments{
 			Method: "GetAll",
-			Router: `/`,
-			AllowHTTPMethods: []string{"get"},
+			Router: `/GetLevelAll`,
+			AllowHTTPMethods: []string{"get","post"},
 			MethodParams: param.Make(),
 			Params: nil})
 
 	beego.GlobalControllerRouter["ZkrtServices/controllers:LevelZController"] = append(beego.GlobalControllerRouter["ZkrtServices/controllers:LevelZController"],
 		beego.ControllerComments{
 			Method: "GetOne",
-			Router: `/:id`,
-			AllowHTTPMethods: []string{"get"},
+			Router: `/GetLevelOne/:LevelName`,
+			AllowHTTPMethods: []string{"get","post"},
 			MethodParams: param.Make(),
 			Params: nil})
 
 	beego.GlobalControllerRouter["ZkrtServices/controllers:LevelZController"] = append(beego.GlobalControllerRouter["ZkrtServices/controllers:LevelZController"],
 		beego.ControllerComments{
-			Method: "Put",
-			Router: `/:id`,
-			AllowHTTPMethods: []string{"put"},
+			Method: "UpdateLevel",
+			Router: `/UpdateLevel/:levelUpdateName`,
+			AllowHTTPMethods: []string{"post","get"},
+			MethodParams: param.Make(),
+			Params: nil})
+
+	beego.GlobalControllerRouter["ZkrtServices/controllers:LevelZController"] = append(beego.GlobalControllerRouter["ZkrtServices/controllers:LevelZController"],
+		beego.ControllerComments{
+			Method: "UpdateLevelId",
+			Router: `/UpdateLevelId/:levelUpdateNameId`,
+			AllowHTTPMethods: []string{"post","get","put"},
 			MethodParams: param.Make(),
 			Params: nil})
 
 	beego.GlobalControllerRouter["ZkrtServices/controllers:LevelZController"] = append(beego.GlobalControllerRouter["ZkrtServices/controllers:LevelZController"],
 		beego.ControllerComments{
 			Method: "Delete",
-			Router: `/:id`,
+			Router: `/levelDel/:LevelName`,
 			AllowHTTPMethods: []string{"delete"},
 			MethodParams: param.Make(),
 			Params: nil})
@@ -289,14 +265,6 @@ func init() {
 
 	beego.GlobalControllerRouter["ZkrtServices/controllers:MoudleZController"] = append(beego.GlobalControllerRouter["ZkrtServices/controllers:MoudleZController"],
 		beego.ControllerComments{
-			Method: "Post",
-			Router: `/`,
-			AllowHTTPMethods: []string{"post"},
-			MethodParams: param.Make(),
-			Params: nil})
-
-	beego.GlobalControllerRouter["ZkrtServices/controllers:MoudleZController"] = append(beego.GlobalControllerRouter["ZkrtServices/controllers:MoudleZController"],
-		beego.ControllerComments{
 			Method: "GetAll",
 			Router: `/`,
 			AllowHTTPMethods: []string{"get"},
@@ -327,6 +295,14 @@ func init() {
 			MethodParams: param.Make(),
 			Params: nil})
 
+	beego.GlobalControllerRouter["ZkrtServices/controllers:MoudleZController"] = append(beego.GlobalControllerRouter["ZkrtServices/controllers:MoudleZController"],
+		beego.ControllerComments{
+			Method: "AddOrUpdateMoudle",
+			Router: `/AddMoudle/:addmoudle`,
+			AllowHTTPMethods: []string{"post","get","put"},
+			MethodParams: param.Make(),
+			Params: nil})
+
 	beego.GlobalControllerRouter["ZkrtServices/controllers:TraceZController"] = append(beego.GlobalControllerRouter["ZkrtServices/controllers:TraceZController"],
 		beego.ControllerComments{
 			Method: "Post",
@@ -369,14 +345,6 @@ func init() {
 
 	beego.GlobalControllerRouter["ZkrtServices/controllers:UserZController"] = append(beego.GlobalControllerRouter["ZkrtServices/controllers:UserZController"],
 		beego.ControllerComments{
-			Method: "Post",
-			Router: `/`,
-			AllowHTTPMethods: []string{"post"},
-			MethodParams: param.Make(),
-			Params: nil})
-
-	beego.GlobalControllerRouter["ZkrtServices/controllers:UserZController"] = append(beego.GlobalControllerRouter["ZkrtServices/controllers:UserZController"],
-		beego.ControllerComments{
 			Method: "GetAll",
 			Router: `/`,
 			AllowHTTPMethods: []string{"get"},
@@ -385,33 +353,41 @@ func init() {
 
 	beego.GlobalControllerRouter["ZkrtServices/controllers:UserZController"] = append(beego.GlobalControllerRouter["ZkrtServices/controllers:UserZController"],
 		beego.ControllerComments{
+			Method: "AddUser",
+			Router: `/AddUser/:userNamePwd`,
+			AllowHTTPMethods: []string{"post","get","put"},
+			MethodParams: param.Make(),
+			Params: nil})
+
+	beego.GlobalControllerRouter["ZkrtServices/controllers:UserZController"] = append(beego.GlobalControllerRouter["ZkrtServices/controllers:UserZController"],
+		beego.ControllerComments{
 			Method: "GetOne",
-			Router: `/:id`,
-			AllowHTTPMethods: []string{"get"},
-			MethodParams: param.Make(),
-			Params: nil})
-
-	beego.GlobalControllerRouter["ZkrtServices/controllers:UserZController"] = append(beego.GlobalControllerRouter["ZkrtServices/controllers:UserZController"],
-		beego.ControllerComments{
-			Method: "Put",
-			Router: `/:id`,
-			AllowHTTPMethods: []string{"put"},
-			MethodParams: param.Make(),
-			Params: nil})
-
-	beego.GlobalControllerRouter["ZkrtServices/controllers:UserZController"] = append(beego.GlobalControllerRouter["ZkrtServices/controllers:UserZController"],
-		beego.ControllerComments{
-			Method: "Delete",
-			Router: `/:id`,
-			AllowHTTPMethods: []string{"delete"},
+			Router: `/GetUserOne/:name`,
+			AllowHTTPMethods: []string{"get","post","put"},
 			MethodParams: param.Make(),
 			Params: nil})
 
 	beego.GlobalControllerRouter["ZkrtServices/controllers:UserZController"] = append(beego.GlobalControllerRouter["ZkrtServices/controllers:UserZController"],
 		beego.ControllerComments{
 			Method: "SignUser",
-			Router: `/Sign`,
-			AllowHTTPMethods: []string{"get"},
+			Router: `/Sign/:userNamePwd`,
+			AllowHTTPMethods: []string{"get","post","put"},
+			MethodParams: param.Make(),
+			Params: nil})
+
+	beego.GlobalControllerRouter["ZkrtServices/controllers:UserZController"] = append(beego.GlobalControllerRouter["ZkrtServices/controllers:UserZController"],
+		beego.ControllerComments{
+			Method: "Delete",
+			Router: `/UserDel/:name`,
+			AllowHTTPMethods: []string{"delete"},
+			MethodParams: param.Make(),
+			Params: nil})
+
+	beego.GlobalControllerRouter["ZkrtServices/controllers:UserZController"] = append(beego.GlobalControllerRouter["ZkrtServices/controllers:UserZController"],
+		beego.ControllerComments{
+			Method: "GetUpdateUserAdminBool",
+			Router: `/UserUpdate/:userupdate`,
+			AllowHTTPMethods: []string{"get","post","put"},
 			MethodParams: param.Make(),
 			Params: nil})
 

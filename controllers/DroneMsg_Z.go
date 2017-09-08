@@ -2,12 +2,11 @@ package controllers
 
 import (
 	"ZkrtServices/models"
-	"encoding/json"
 	"errors"
 	"strconv"
 	"strings"
-
 	"github.com/astaxie/beego"
+	"time"
 )
 
 // DroneMsgZController operations for DroneMsgZ
@@ -17,32 +16,49 @@ type DroneMsgZController struct {
 
 // URLMapping ...
 func (c *DroneMsgZController) URLMapping() {
-	c.Mapping("Post", c.Post)
+	c.Mapping("AddDrone", c.AddDroneMessage)
 	c.Mapping("GetOne", c.GetOne)
 	c.Mapping("GetAll", c.GetAll)
-	c.Mapping("Put", c.Put)
+	c.Mapping("UpdateDrone", c.DroneMsgUpdate)
 	c.Mapping("Delete", c.Delete)
 }
 
-// Post ...
-// @Title Post
+// AddDroneMessage ...
+// @Title AddDroneMessage
 // @Description create DroneMsgZ
-// @Param	body		body 	models.DroneMsgZ	true		"body for DroneMsgZ content"
-// @Success 201 {int} models.DroneMsgZ
+// @Param	DroneId	   query   strinng false	   "drone id"
+// @Param   DroneAlt   query   float   false       "drone alt"
+// @Param   DroneYaw   query   float   false       "drone yaw"
+// @Param   DronePitch query   float   false       "drone pitch"
+// @Param   DroneSpeed query   float   false       "drone speed"
+// @Param   DroneBool  query   int     false       "drone bool"
+// @Success 201 {int} models.DroneMsgZ.id
 // @Failure 403 body is empty
-// @router / [post]
-func (c *DroneMsgZController) Post() {
+// @router /AddDrone/:dronemsg [post,get]
+func (c *DroneMsgZController) AddDroneMessage() {
 	var v models.DroneMsgZ
-	if err := json.Unmarshal(c.Ctx.Input.RequestBody, &v); err == nil {
-		if _, err := models.AddDroneMsgZ(&v); err == nil {
-			c.Ctx.Output.SetStatus(201)
-			c.Data["json"] = v
-		} else {
-			c.Data["json"] = err.Error()
-		}
+	strDrone := c.Ctx.Input.Param(":dronemsg")
+	droneMessage := strings.Split(strDrone,",")
+
+	droneAlt,_ := strconv.ParseFloat(droneMessage[1],32)
+	droneYaw,_ := strconv.ParseFloat(droneMessage[2],32)
+	dronePitch,_ := strconv.ParseFloat(droneMessage[3],32)
+	droneSpeed,_ := strconv.ParseFloat(droneMessage[4],32)
+	droneBool,_ := strconv.Atoi(droneMessage[5])
+	v.DroneID = droneMessage[0]
+	v.DroneAlt = float32(droneAlt)
+	v.DroneYaw = float32(droneYaw)
+	v.DronePitch = float32(dronePitch)
+	v.DroneSpeed = float32(droneSpeed)
+	v.DroneBool = droneBool
+	v.DroneDateTime = time.Now()
+	v.DroneDate = time.Now()
+	if id, err := models.AddDroneMsgZ(&v); err == nil {
+		c.Data["json"] = id
 	} else {
 		c.Data["json"] = err.Error()
 	}
+
 	c.ServeJSON()
 }
 
@@ -76,7 +92,7 @@ func (c *DroneMsgZController) GetOne() {
 // @Param	offset	query	string	false	"Start position of result set. Must be an integer"
 // @Success 200 {object} models.DroneMsgZ
 // @Failure 403
-// @router / [get]
+// @router / [get,post,put]
 func (c *DroneMsgZController) GetAll() {
 	var fields []string
 	var sortby []string
@@ -131,23 +147,60 @@ func (c *DroneMsgZController) GetAll() {
 // Put ...
 // @Title Put
 // @Description update the DroneMsgZ
-// @Param	id		path 	string	true		"The id you want to update"
-// @Param	body		body 	models.DroneMsgZ	true		"body for DroneMsgZ content"
+// @Param	DroneId	   query   strinng false	   "drone id"
+// @Param   DroneAlt   query   float   false       "drone alt"
+// @Param   DroneYaw   query   float   false       "drone yaw"
+// @Param   DronePitch query   float   false       "drone pitch"
+// @Param   DroneSpeed query   float   false       "drone speed"
+// @Param   DroneBool  query   int     false       "drone bool"
 // @Success 200 {object} models.DroneMsgZ
 // @Failure 403 :id is not int
-// @router /:id [put]
-func (c *DroneMsgZController) Put() {
-	idStr := c.Ctx.Input.Param(":id")
-	id, _ := strconv.Atoi(idStr)
-	v := models.DroneMsgZ{Id: id}
-	if err := json.Unmarshal(c.Ctx.Input.RequestBody, &v); err == nil {
-		if err := models.UpdateDroneMsgZById(&v); err == nil {
-			c.Data["json"] = "OK"
-		} else {
-			c.Data["json"] = err.Error()
-		}
-	} else {
+// @router /updateDrone/:updateDroneMessage [get,post,put]
+func (c *DroneMsgZController) DroneMsgUpdate() {
+	strDrone := c.Ctx.Input.Param(":updateDroneMessage")
+	droneMessage := strings.Split(strDrone,",")
+
+	var id int64
+	var err error
+
+	if len(droneMessage)==2 {
+		droneBool,_ := strconv.Atoi(droneMessage[1])
+		id,err =models.UpdateDroneMsgZByDroneIdBool(droneMessage[0],float32(droneBool))
+	}else{
+		droneAlt,_ := strconv.ParseFloat(droneMessage[1],32)
+		droneYaw,_ := strconv.ParseFloat(droneMessage[2],32)
+		dronePitch,_ := strconv.ParseFloat(droneMessage[3],32)
+		droneSpeed,_ := strconv.ParseFloat(droneMessage[4],32)
+		droneBool,_ := strconv.Atoi(droneMessage[5])
+		id,err =models.UpdateDroneMsgZByDroneId(droneMessage[0],float32(droneAlt),
+			float32(droneYaw),float32(dronePitch),float32(droneSpeed),float32(droneBool))
+	}
+
+	if err != nil{
 		c.Data["json"] = err.Error()
+	}else{
+		c.Data["json"] = id
+	}
+	c.ServeJSON()
+}
+
+// Put ...
+// @Title Put
+// @Description update the DroneMsgZ
+// @Param	DroneId	   query   strinng false	   "drone id"
+// @Param   DroneBool  query   int     false       "drone bool"
+// @Success 200 {object} models.DroneMsgZ
+// @Failure 403 :id is not int
+// @router /updateDrone/:updateDroneMessage [get,post,put]
+func (c *DroneMsgZController) DroneMsgUpdateBool() {
+	strDrone := c.Ctx.Input.Param(":updateDroneMessage")
+	droneMessage := strings.Split(strDrone,",")
+	droneBool,_ := strconv.Atoi(droneMessage[1])
+
+	if id,err :=models.UpdateDroneMsgZByDroneIdBool(droneMessage[0],float32(droneBool)); err != nil{
+		c.Data["json"] = err.Error()
+	}else{
+		c.Data["json"] = id
 	}
 	c.ServeJSON()
 }

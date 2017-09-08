@@ -8,7 +8,7 @@ import (
 )
 
 func init() {
-	orm.RegisterDataBase("default", "mysql", "root:123456@tcp(127.0.0.1:3306)/ZKRT_DATABSE")
+	orm.RegisterDataBase("default", "mysql", "root:123456@tcp(127.0.0.1:3306)/ZKRT_DATABASE")
 }
 
 func main() {
@@ -18,4 +18,3 @@ func main() {
 	}
 	beego.Run()
 }
-

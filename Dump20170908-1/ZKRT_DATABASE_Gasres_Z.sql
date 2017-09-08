@@ -1,6 +1,8 @@
+CREATE DATABASE  IF NOT EXISTS `ZKRT_DATABASE` /*!40100 DEFAULT CHARACTER SET latin1 */;
+USE `ZKRT_DATABASE`;
 -- MySQL dump 10.13  Distrib 5.7.19, for Linux (x86_64)
 --
--- Host: localhost    Database: ZKRT_DATABSE
+-- Host: localhost    Database: ZKRT_DATABASE
 -- ------------------------------------------------------
 -- Server version	5.7.19-0ubuntu0.17.04.1
 
@@ -16,34 +18,30 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `Video_Z`
+-- Table structure for table `Gasres_Z`
 --
 
-DROP TABLE IF EXISTS `Video_Z`;
+DROP TABLE IF EXISTS `Gasres_Z`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `Video_Z` (
-  `VideoId` int(11) NOT NULL AUTO_INCREMENT,
-  `DroneID` varchar(100) NOT NULL,
-  `VideoAndBool` int(11) NOT NULL,
-  `VideoRtmpAddress` varchar(225) DEFAULT NULL,
-  `VideoStoreAddress` varchar(225) DEFAULT NULL,
-  `VideoStoreBool` int(11) NOT NULL,
-  `VideoStoreTime` datetime DEFAULT NULL,
-  `VideoRtmpDateTime` datetime DEFAULT NULL,
-  `VideoDate` date NOT NULL,
-  PRIMARY KEY (`VideoId`),
-  UNIQUE KEY `VideoId_UNIQUE` (`VideoId`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+CREATE TABLE `Gasres_Z` (
+  `GasResId` int(11) NOT NULL AUTO_INCREMENT,
+  `GasResName` varchar(100) NOT NULL,
+  `GasResNumber` int(11) NOT NULL,
+  `GasResDateTime` datetime NOT NULL,
+  `GasResDate` date NOT NULL,
+  PRIMARY KEY (`GasResId`),
+  UNIQUE KEY `GasresId_UNIQUE` (`GasResId`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `Video_Z`
+-- Dumping data for table `Gasres_Z`
 --
 
-LOCK TABLES `Video_Z` WRITE;
-/*!40000 ALTER TABLE `Video_Z` DISABLE KEYS */;
-/*!40000 ALTER TABLE `Video_Z` ENABLE KEYS */;
+LOCK TABLES `Gasres_Z` WRITE;
+/*!40000 ALTER TABLE `Gasres_Z` DISABLE KEYS */;
+/*!40000 ALTER TABLE `Gasres_Z` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -55,4 +53,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-09-05 22:35:28
+-- Dump completed on 2017-09-08 23:03:40

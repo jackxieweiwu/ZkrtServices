@@ -1,6 +1,8 @@
+CREATE DATABASE  IF NOT EXISTS `ZKRT_DATABASE` /*!40100 DEFAULT CHARACTER SET latin1 */;
+USE `ZKRT_DATABASE`;
 -- MySQL dump 10.13  Distrib 5.7.19, for Linux (x86_64)
 --
--- Host: localhost    Database: ZKRT_DATABSE
+-- Host: localhost    Database: ZKRT_DATABASE
 -- ------------------------------------------------------
 -- Server version	5.7.19-0ubuntu0.17.04.1
 
@@ -16,35 +18,32 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `Level_Z`
+-- Table structure for table `User_Z`
 --
 
-DROP TABLE IF EXISTS `Level_Z`;
+DROP TABLE IF EXISTS `User_Z`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `Level_Z` (
-  `LevelId` int(11) NOT NULL AUTO_INCREMENT,
-  `LevelName` varchar(100) NOT NULL,
-  `LevelNumber` int(11) NOT NULL,
-  `LevelUpNumber` int(11) NOT NULL,
-  `LevelDateTime` datetime NOT NULL,
-  `LevelDate` date NOT NULL,
-  PRIMARY KEY (`LevelId`),
-  UNIQUE KEY `idLevel_Z_UNIQUE` (`LevelId`),
-  UNIQUE KEY `LevelName_UNIQUE` (`LevelName`),
-  UNIQUE KEY `LevelNumber_UNIQUE` (`LevelNumber`),
-  UNIQUE KEY `LevelUpNumber_UNIQUE` (`LevelUpNumber`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+CREATE TABLE `User_Z` (
+  `Uid` int(11) NOT NULL AUTO_INCREMENT,
+  `UserName` varchar(100) NOT NULL,
+  `UserPwd` varchar(100) NOT NULL,
+  `UserAdminBool` int(11) NOT NULL,
+  `LoginTime` datetime NOT NULL,
+  `UserData` date NOT NULL,
+  PRIMARY KEY (`Uid`),
+  UNIQUE KEY `idnew_table_UNIQUE` (`Uid`),
+  UNIQUE KEY `UserName_UNIQUE` (`UserName`)
+) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `Level_Z`
+-- Dumping data for table `User_Z`
 --
 
-LOCK TABLES `Level_Z` WRITE;
-/*!40000 ALTER TABLE `Level_Z` DISABLE KEYS */;
-INSERT INTO `Level_Z` VALUES (1,'gdxfzj',1,0,'2017-09-05 16:05:48','2017-09-05');
-/*!40000 ALTER TABLE `Level_Z` ENABLE KEYS */;
+LOCK TABLES `User_Z` WRITE;
+/*!40000 ALTER TABLE `User_Z` DISABLE KEYS */;
+/*!40000 ALTER TABLE `User_Z` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -56,4 +55,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-09-05 22:35:27
+-- Dump completed on 2017-09-08 23:03:40

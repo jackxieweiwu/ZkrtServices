@@ -129,16 +129,23 @@ func GetAllDroneMsgZ(query map[string]string, fields []string, sortby []string, 
 
 // UpdateDroneMsgZ updates DroneMsgZ by Id and returns error if
 // the record to be updated doesn't exist
-func UpdateDroneMsgZById(m *DroneMsgZ) (err error) {
+func UpdateDroneMsgZByDroneId(droneId string,droneAlt float32,
+	droneYaw float32,dronePitch float32,droneSpeed float32,droneBool float32) (id int64, err error) {
 	o := orm.NewOrm()
-	v := DroneMsgZ{Id: m.Id}
-	// ascertain id exists in the database
-	if err = o.Read(&v); err == nil {
-		var num int64
-		if num, err = o.Update(m); err == nil {
-			fmt.Println("Number of records updated in database:", num)
-		}
-	}
+	id, err = o.QueryTable(new(DroneMsgZ)).Filter("DroneID", droneId).Update(orm.Params{
+		"DroneAlt": droneAlt,"DroneYaw": droneYaw,"DronePitch": dronePitch,
+		"DroneSpeed": droneSpeed,"DroneBool": droneBool,
+	})
+	return
+}
+
+// UpdateDroneMsgZ updates DroneMsgZ by Id and returns error if
+// the record to be updated doesn't exist
+func UpdateDroneMsgZByDroneIdBool(droneId string,droneBool float32) (id int64, err error) {
+	o := orm.NewOrm()
+	id, err = o.QueryTable(new(DroneMsgZ)).Filter("DroneID", droneId).Update(orm.Params{
+		"DroneBool": droneBool,
+	})
 	return
 }
 

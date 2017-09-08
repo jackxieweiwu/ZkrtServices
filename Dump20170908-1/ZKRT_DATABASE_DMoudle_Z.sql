@@ -1,6 +1,8 @@
+CREATE DATABASE  IF NOT EXISTS `ZKRT_DATABASE` /*!40100 DEFAULT CHARACTER SET latin1 */;
+USE `ZKRT_DATABASE`;
 -- MySQL dump 10.13  Distrib 5.7.19, for Linux (x86_64)
 --
--- Host: localhost    Database: ZKRT_DATABSE
+-- Host: localhost    Database: ZKRT_DATABASE
 -- ------------------------------------------------------
 -- Server version	5.7.19-0ubuntu0.17.04.1
 
@@ -32,7 +34,7 @@ CREATE TABLE `DMoudle_Z` (
   PRIMARY KEY (`DMoudleId`),
   UNIQUE KEY `DMoudleId_UNIQUE` (`DMoudleId`),
   UNIQUE KEY `DMoudleName_UNIQUE` (`DMoudleName`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -53,4 +55,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-09-05 22:35:28
+-- Dump completed on 2017-09-08 23:03:41

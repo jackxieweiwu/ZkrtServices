@@ -8,6 +8,7 @@ import (
 	"strings"
 
 	"github.com/astaxie/beego"
+	"time"
 )
 
 // MoudleZController operations for MoudleZ
@@ -17,7 +18,7 @@ type MoudleZController struct {
 
 // URLMapping ...
 func (c *MoudleZController) URLMapping() {
-	c.Mapping("Post", c.Post)
+	c.Mapping("AddMoudle", c.AddOrUpdateMoudle)
 	c.Mapping("GetOne", c.GetOne)
 	c.Mapping("GetAll", c.GetAll)
 	c.Mapping("Put", c.Put)
@@ -27,20 +28,28 @@ func (c *MoudleZController) URLMapping() {
 // Post ...
 // @Title Post
 // @Description create MoudleZ
-// @Param	body		body 	models.MoudleZ	true		"body for MoudleZ content"
+// @Param	DroneId		string 	models.MoudleZ	true		"Droneid for MoudleZ content"
+// @Param	Moudlename	string 	models.MoudleZ	true		"MoudleName for MoudleZ content"
+// @Param	MoudleBool	int 	models.MoudleZ	true		"MoudleBool for MoudleZ content"
+// @Param	MoudleDate	string 	models.MoudleZ	true		"MoudleBool for MoudleZ content"
 // @Success 201 {int} models.MoudleZ
 // @Failure 403 body is empty
-// @router / [post]
-func (c *MoudleZController) Post() {
+// @router /AddMoudle/:addmoudle [post,get,put]
+func (c *MoudleZController) AddOrUpdateMoudle() {
 	var v models.MoudleZ
-	if err := json.Unmarshal(c.Ctx.Input.RequestBody, &v); err == nil {
-		if _, err := models.AddMoudleZ(&v); err == nil {
-			c.Ctx.Output.SetStatus(201)
-			c.Data["json"] = v
-		} else {
-			c.Data["json"] = err.Error()
-		}
-	} else {
+	moudleMsg := c.Ctx.Input.Param(":addmoudle")
+	strMoudle := strings.Split(moudleMsg,",")
+	moudleNum, _ := strconv.Atoi(strMoudle[2])
+	date, _ := time.Parse("2006-01-02", strMoudle[3])
+	v.DroneID = strMoudle[0]
+	v.ModuleName = strMoudle[1]
+	v.MoudleBool = moudleNum
+	v.MoudleDateTime = time.Now()
+	v.MoudleDate = date
+
+	if id, err := models.AddMoudleZ(&v); err == nil{
+		c.Data["json"] = id
+	}else{
 		c.Data["json"] = err.Error()
 	}
 	c.ServeJSON()
